@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2? family= Amatic+SC & family= Cinzel:wght@400;500;600;700;800;900 & family= Indie+Flower & família= Marcador+Permanente & família= Sigmar & família= Vollkorn:wght@400;500;600;700 & display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(https://img.freepik.com/fotos-gratis/girassois-linda-flor-no-campo_53876-14214.jpg?w=900&t=st=1683335303~exp=1683335903~hmac=9225810395c225d748467d820d3e23ff7acc5f40cd09ea3eb5d44dfbfe7264ce)
+    no-repeat 65% 80%;
+    background-size: cover;
+  background-color: rgb(249, 221, 221);
+  background-blend-mode: multiply;
+  overflow-x: hidden;
+}
+
+/*----------------------------- NAVBAR -----------------------------------*/
+.headerNav {
+  font-family: "Vollkorn", "poppins", "roboto", "sans-serif";
+  font-size: 800;
+  background-color: #0fd43d0c;
+}
+
+.headerNav ul,
+a {
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  color: #000000;
+  /* text-shadow: 1px 3px  #e5d8d8ff;  #737e03 #8e2710e4;*/
+}
+
+.headerNav li {
+  margin: 1rem;
+}
+
+/*----------------------------- IMAGEM INICIAL-----------------------------------*/
+.wel-text {
+  margin-top: 20%;
+  margin-right: 60%;
+  opacity: 0.75;
+  background-color: #2d2301;
+  text-align: center;
+  padding: 2rem;
+}
+
+.h1-title {
+  font-family: "Able", sans-serif;
+  font-size: 400%;
+  color: #e1a700;
+  line-height: 50px;
+}
+/* 
+.h3-title {
+  margin-top: 1rem;
+  font-family: "Comfortaa", cursive;
+  font-size: 150%;
+  color: #fff;
+  line-height: 22px;
+} */
+
+/*----------------------------- INICIO DO CONTEXTO DA PÁGINA -----------------------------------*/
+.container-meio {
+  margin-top: 10%;
+  background-color: #221b07;
+  color: antiquewhite;
+  height: 193%;
+  width: 100%;
+}
+
+.container-meio h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.title-divider {
+  border-top: 10px ridge #d1c33d;
+}
+
+.text-1 {
+  font-family: "EB Garamond", serif, "Comfortaa";
+  text-align: justify;
+  line-height: 1.5em;
+  max-width: 600px;
+  margin-top: 1.5rem;
+  margin-left: 10%;
+}
+
+.credit {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+.credit img {
+  margin-top: 2rem;
+}
+
+img { 
+  filter:drop-shadow(
+  25px -8px 21px #000000
+  ); 
+}
+
+.text-2 {
+  font-family: "EB Garamond", serif, "Comfortaa";
+  text-align: justify;
+  line-height: 1.5em;
+  max-width: 700px;
+  margin-top: 2rem;
+}
+
+.text-1::first-letter,
+.text-2::first-letter {
+  font-family: "Kanit", sans-serif;
+  font-size: 6.5em;
+  font-weight: 700;
+  float: left;
+  line-height: 80px;
+  margin-right: 3px;
+  color: #746057;
+}
+
+
+
+/*----------------------------- GRÁFICO -----------------------------------*/
+
+.container-grafico{
+  background-color: #d1c33d; 
+  display: flex;
+ justify-content: center;
+align-items: center;
+}
+
+.grafico{
+width: 30%; 
+}
+
+#grafico01{
+  margin: 1rem 0;
+}
+
+#seta01{
+  width: 40%;
+  position: relative;
+  top: 225px; 
+  right: 40px;
+  filter: contrast(70%);
+}
+
+#seta02{
+  width: 40%;
+  position: relative;
+  bottom: 400px; 
+  left: 350px;
+  /* transform: rotate(90deg); */
+  transform: scaleX(-1);
+  filter: contrast(70%);
+}
+
+#seta03{
+  width: 40%;
+  position: relative;
+  bottom: 525px; 
+ right: 40px;
+  transform: rotate(180deg) scaleX(-1);
+  filter: contrast(70%);
+}
+
+#porcentagem01{
+  width: 40%;
+  position: relative;
+  bottom: 500px; 
+left: 400px;
+}
+
+#text-porcent01{
+  position: relative;
+  bottom:480px; 
+left: 500px;
+max-width: 400px;
+text-align: justify;
+font-weight: bold;
+}
+
+
+
+
+/*----------------------------- SCROLL -----------------------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+} /* tamanho da linha*/
+
+::-webkit-scrollbar-track {
+  background-color: #d1c33d;
+} /* cor de fundo do scrool*/
+
+::-webkit-scrollbar-thumb {
+  background-color: #322b17;
+  border-radius: 20px;
+} /* cor da barra de rolagem*/

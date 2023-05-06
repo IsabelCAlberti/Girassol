@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <title> Home | Girassol </title>
+</head>
+
+<body>
+
+    <!-- <div class="headerNav">
+        <ul class="navbarLista">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="redes-sociais.html" target="_blank">SEI LA</a></li>
+            <li><a href="quiz.html" class="loginBtn">QUIZ</a></li>
+        </ul>
+    </div> -->
+
+    <section class="landing">
+        <div class="wel-screen">
+            <div class="wel-text">
+                <h1 class="h1-title">Girassol</h1>
+                <!-- <h3 class="h3-title">e sua biodiversidade</h3> -->
+            </div>
+        </div>
+    </section>
+
+    <div class="container-meio">
+        <div class="title-divider"></div>
+        <h1>Nada supera a beleza de um girassol.</h1>
+        <div class="credit">
+            <div class="text-1">
+                <p> O girassol é uma planta conhecida por suas flores grandes e brilhantes que seguem o movimento do sol
+                    durante o dia, daí seu nome em português. É nativa da América do Norte, essa planta é hoje cultivada
+                    em todo o mundo, tendo se tornado um símbolo de felicidade, esperança e energia positiva. Cresce com
+                    uma haste reta e longa, podendo chegar a medir vários metros de altura. Na ponta da haste, há uma
+                    flor que pode medir até 30 centímetros de diâmetro. A flor do girassol é composta por uma coroa de
+                    pétalas amarelas brilhantes, que cercam um disco central cheio de pequenas flores em forma de tubo.
+                    À medida que a flor amadurece, as pétalas começam a se descolorir e a cair, deixando apenas o disco
+                    central cheio de sementes. Essas sementes são comestíveis e são usadas na produção de óleo de
+                    girassol. Além disso, as sementes de girassol também são um alimento popular para pássaros.
+                </p>
+            </div>
+            <img src="assets/rodela-girassol.png" width="560" alt="">
+        </div>
+        <div class="credit">
+            <img src="assets/pngegg (3).png" width="360" alt="">
+            <div class="text-2">
+                <p> A flor de girassol é considerada uma das mais bonitas e atraentes do mundo, e isso se deve em grande
+                    parte à sua cor vibrante e ao seu formato único. Como a própria palavra sugere, a flor de girassol
+                    lembra um sol, com suas pétalas amarelas irradiando para fora do seu centro. Essa cor amarela
+                    brilhante é frequentemente associada a sentimentos de alegria, otimismo e esperança. Além disso, o
+                    formato da flor de girassol é muito peculiar, com suas pétalas dispostas em espiral em torno do
+                    centro da flor, criando uma imagem impressionante e única. Por todas essas razões, a flor de
+                    girassol é muito admirada e considerada uma das mais belas da natureza.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-grafico">
+            <div class="grafico">
+
+                <img id="seta01" src="assets/seta.png" alt="">
+
+                <canvas id="grafico01"></canvas>
+
+                <img id="seta02" src="assets/seta.png" alt="">
+                <img id="porcentagem01" src="assets/16.png" alt="">
+<p id="text-porcent01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est accusantium blanditiis perspiciatis reiciendis odit.</p>
+                <img id="seta03" src="assets/seta.png" alt="">
+             
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas class="line-chart"></canvas>
+<script>
+
+    const ctx01 = document.getElementById('grafico01');
+
+    new Chart(ctx01, {
+        type: 'pie',
+        data: {
+            labels: ['Óleo de Girassol', 'Ácidos graxos', 'Ração Gado'],
+            datasets: [{
+                data: [300, 50, 100],
+                borderWidth: 1,
+                backgroundColor: [
+                    '#e1a700',
+                    '#737e03',
+                    '#2d2301'
+                ],
+                hoverOffset: 4,
+                borderColor: '#322b17',
+                borderWidth: 1,
+                color: 'white',
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+</script>
