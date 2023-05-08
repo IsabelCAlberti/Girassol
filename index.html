@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/admin.css">
+
     <title> Home | Girassol </title>
 </head>
 
 <body>
-
+    <a name="top"></a>
     <!-- <div class="headerNav">
         <ul class="navbarLista">
             <li><a href="index.html">HOME</a></li>
@@ -24,14 +24,14 @@
         <div class="wel-screen">
             <div class="wel-text">
                 <h1 class="h1-title">Girassol</h1>
-                <!-- <h3 class="h3-title">e sua biodiversidade</h3> -->
+                <h3 class="h3-title">Nada supera a beleza de um girassol.</h3>
             </div>
         </div>
     </section>
 
     <div class="container-meio">
         <div class="title-divider"></div>
-        <h1>Nada supera a beleza de um girassol.</h1>
+        <h1>Nascerá uma flor amarela, Como um girassol...</h1>
         <div class="credit">
             <div class="text-1">
                 <p> O girassol é uma planta conhecida por suas flores grandes e brilhantes que seguem o movimento do sol
@@ -65,32 +65,66 @@
             <div class="grafico">
 
                 <img id="seta01" src="assets/seta.png" alt="">
+                <img id="porcentagem02" src="assets/16.png" alt="">
+                <p id="text-porcent02">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore
+                    repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est
+                    accusantium blanditiis perspiciatis reiciendis odit.</p>
 
                 <canvas id="grafico01"></canvas>
 
                 <img id="seta02" src="assets/seta.png" alt="">
                 <img id="porcentagem01" src="assets/16.png" alt="">
-<p id="text-porcent01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est accusantium blanditiis perspiciatis reiciendis odit.</p>
+                <p id="text-porcent01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore
+                    repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est
+                    accusantium blanditiis perspiciatis reiciendis odit.</p>
                 <img id="seta03" src="assets/seta.png" alt="">
-            
-
+                <img id="porcentagem03" src="assets/16.png" alt="">
+                <p id="text-porcent03">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore
+                    repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est
+                    accusantium blanditiis perspiciatis reiciendis odit.</p>
             </div>
         </div>
-    </div>
+        <div class="container-grafico02">
+            <div class="grafico02">
+                <canvas id="grafico02"></canvas>
+                <canvas id="grafico03"></canvas>
+            </div>
+        </div>
 
+        <div class="footer">
 
+            <div class="footerContainer">
+
+                <div class="container-3">
+                    <p>
+                        Copyright © 2023, Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button><a href="#top" class="back-to-top" style="color: antiquewhite;">˄</a></button>
+
+        <audio id="audio" autoplay="loop">
+            <source
+                src="https://rr5---sn-bg07dn6k.googlevideo.com/videoplayback?expire=1683512935&ei=BwpYZNaFGtS01gLO6K34BA&ip=23.88.39.196&id=o-AO_4bJWdKRk7Ko1L1Y-LDf2RanBjiInU_p6AOiYSNTkr&itag=17&source=youtube&requiressl=yes&spc=qEK7B3ZpqnVC-KebKRff_5fTs1qhEK4&vprv=1&svpuc=1&mime=video%2F3gpp&gir=yes&clen=24554667&dur=3604.201&lmt=1635836900438024&fexp=24007246&c=ANDROID&txp=5311224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgGtUvM1uq5S-fs1XtuZAZhmJKppDE9aaJO5Chc9-vKXQCIQD0FFpfhO8HRwL-Soej5mGJsvlJw78-ud2fo5V_fN--ew%3D%3D&rm=sn-4g5ez67l&req_id=2bd969886fc3a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-8p8v-bg0ee7z&cms_redirect=yes&cmsv=e&mh=Vp&mip=2804:431:c7e4:8f1:cad:4cc1:69ac:2397&mm=29&mn=sn-bg07dn6k&ms=rdu&mt=1683491824&mv=m&mvi=5&pl=50&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgcNCqYLJf1xtr-jGl2fSSz3gxqRA-iqR-kvvJsTzGtBYCIA4_AlB9eZ901w-yGTFI__avIE3OGynG0aRyh5Lng0K8"
+                type="audio/mp3" />
+        </audio>
 
 </body>
 
 </html>
 
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <canvas class="line-chart"></canvas>
 <script>
+
+    var audio = document.getElementById('audio');
+
+    function diminuir_volume() {
+        if (audio.volume > 0) {
+            audio.volume -= 0.8;
+        }
+    }
 
     const ctx01 = document.getElementById('grafico01');
 
@@ -116,5 +150,61 @@
             responsive: true,
         }
     });
+
+
+    const ctx02 = document.getElementById('grafico02');
+
+    new Chart(ctx02, {
+        type: 'pie',
+        data: {
+            labels: ['Óleo de Girassol', 'Ácidos graxos', 'Ração Gado'],
+            datasets: [{
+                data: [300, 50, 100],
+                borderWidth: 1,
+                backgroundColor: [
+                    '#e1a731',
+                    '#733e03',
+                    '#8e2710e4'
+                ],
+                hoverOffset: 4,
+                borderColor: '#322b17',
+                borderWidth: 1,
+                color: 'white',
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+
+    const ctx03 = document.getElementById('grafico03');
+
+    new Chart(ctx03, {
+        type: 'pie',
+        data: {
+            labels: ['Óleo de Girassol', 'Ácidos graxos', 'Ração Gado'],
+            datasets: [{
+                data: [300, 50, 100],
+                borderWidth: 1,
+                backgroundColor: [
+                    '#e1a731',
+                    '#733e03',
+                    '#8e2710e4'
+                ],
+                hoverOffset: 4,
+                borderColor: '#322b17',
+                borderWidth: 1,
+                color: 'white',
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+
+
+
 
 </script>
