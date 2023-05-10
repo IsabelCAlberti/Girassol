@@ -101,10 +101,11 @@ a {
 .text-1 {
   font-family: "EB Garamond", serif, "Comfortaa";
   text-align: justify;
-  line-height: 1.5em;
-  max-width: 680px;
+  line-height: 1.8em;
+  max-width: 900px;
   margin-top: 1.5rem;
   margin-left: 10%;
+  font-size: 1.3rem;
 }
 
 .credit {
@@ -124,9 +125,9 @@ img {
 .text-2 {
   font-family: "EB Garamond", serif, "Comfortaa";
   text-align: justify;
-  line-height: 1.5em;
-  max-width: 800px;
-  margin-top: 2rem;
+  line-height: 1.8em;
+  max-width: 1000px;
+  font-size: 1.4rem;
 }
 
 .text-1::first-letter,
@@ -151,7 +152,7 @@ img {
 }
 
 .grafico {
-  margin-top: 10rem;
+  margin-top: 20rem;
   width: 30%;
 }
 
@@ -187,16 +188,17 @@ img {
 }
 
 #porcentagem01 {
-  width: 40%;
+  font-size: 200px;
   position: relative;
-  bottom: 600px;
-  left: 410px;
+  bottom:700px;
+  left: 680px;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 #text-porcent01 {
   position: relative;
-  bottom: 550px;
-  left: 600px;
+  bottom: 750px;
+  left: 620px;
   max-width: 410px;
   text-align: justify;
   font-weight: bold;

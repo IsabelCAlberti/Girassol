@@ -31,36 +31,25 @@
 
     <div class="container-meio">
         <div class="title-divider"></div>
-        <h1>Nascerá uma flor amarela, Como um girassol...</h1>
-        <div class="credit">
+             <div class="credit">
             <div class="text-1">
-                <p> O girassol é uma planta conhecida por suas flores grandes e brilhantes que seguem o movimento do sol
-                    durante o dia, daí seu nome em português. É nativa da América do Norte, essa planta é hoje cultivada
-                    em todo o mundo, tendo se tornado um símbolo de felicidade, esperança e energia positiva. Cresce com
-                    uma haste reta e longa, podendo chegar a medir vários metros de altura. Na ponta da haste, há uma
-                    flor que pode medir até 30 centímetros de diâmetro. A flor do girassol é composta por uma coroa de
-                    pétalas amarelas brilhantes, que cercam um disco central cheio de pequenas flores em forma de tubo.
-                    À medida que a flor amadurece, as pétalas começam a se descolorir e a cair, deixando apenas o disco
-                    central cheio de sementes. Essas sementes são comestíveis e são usadas na produção de óleo de
-                    girassol. Além disso, as sementes de girassol também são um alimento popular para pássaros.
-                </p>
+                <p>                     
+                    O girassol é uma planta originárias da América do Norte, que normalmente germina, floresce e morre no período de um ano, da família das Asteraceae, gênero Heliantheae. Foi muito cultivada pelos povos indígenas para alimentaçãoe até hoje é cultivada pelo seu óleo e frutos comestíveis. </p>
             </div>
+            <div data-tilt data-tilt-scale="1.1">
             <img src="assets/rodela-girassol.png" width="560" alt="">
+            </div>
         </div>
         <div class="credit">
-            <img src="assets/pngegg (3).png" width="360" alt="">
+            <div data-tilt data-tilt-axis="y">
+            <img src="assets/pngegg (3).png" width="360" alt=""></div>
             <div class="text-2">
-                <p> A flor de girassol é considerada uma das mais bonitas e atraentes do mundo, e isso se deve em grande
-                    parte à sua cor vibrante e ao seu formato único. Como a própria palavra sugere, a flor de girassol
-                    lembra um sol, com suas pétalas amarelas irradiando para fora do seu centro. Essa cor amarela
-                    brilhante é frequentemente associada a sentimentos de alegria, otimismo e esperança. Além disso, o
-                    formato da flor de girassol é muito peculiar, com suas pétalas dispostas em espiral em torno do
-                    centro da flor, criando uma imagem impressionante e única. Por todas essas razões, a flor de
-                    girassol é muito admirada e considerada uma das mais belas da natureza.
-                </p>
+                <p> O girassol é a única planta que apresenta a característica de seguir o movimento do sol. Esse fenômeno é conhecido como heliotropismo que seria a movimentação durante o dia acompanhando o movimento do sol pelo céu, e à noite retornando à posição original para esperar novamente sua saída na manhã do dia seguinte. Quando param de crescer e alcançam a maturidade deixam de girar, e ficam voltados para o oriente indefinidamente até morrerem.</p>
             </div>
         </div>
 
+        <!-------------------  Gráficos -------------------->
+        
         <div class="container-grafico">
             <div class="grafico">
 
@@ -73,7 +62,7 @@
                 <canvas id="grafico01"></canvas>
 
                 <img id="seta02" src="assets/seta.png" alt="">
-                <img id="porcentagem01" src="assets/16.png" alt="">
+                <p id="porcentagem01">16%</p>
                 <p id="text-porcent01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab quaerat dolore
                     repudiandae animi minus expedita saepe aperiam delectus ullam, rerum possimus quos sit est
                     accusantium blanditiis perspiciatis reiciendis odit.</p>
@@ -109,11 +98,11 @@
                 src="https://rr5---sn-bg07dn6k.googlevideo.com/videoplayback?expire=1683512935&ei=BwpYZNaFGtS01gLO6K34BA&ip=23.88.39.196&id=o-AO_4bJWdKRk7Ko1L1Y-LDf2RanBjiInU_p6AOiYSNTkr&itag=17&source=youtube&requiressl=yes&spc=qEK7B3ZpqnVC-KebKRff_5fTs1qhEK4&vprv=1&svpuc=1&mime=video%2F3gpp&gir=yes&clen=24554667&dur=3604.201&lmt=1635836900438024&fexp=24007246&c=ANDROID&txp=5311224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgGtUvM1uq5S-fs1XtuZAZhmJKppDE9aaJO5Chc9-vKXQCIQD0FFpfhO8HRwL-Soej5mGJsvlJw78-ud2fo5V_fN--ew%3D%3D&rm=sn-4g5ez67l&req_id=2bd969886fc3a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-8p8v-bg0ee7z&cms_redirect=yes&cmsv=e&mh=Vp&mip=2804:431:c7e4:8f1:cad:4cc1:69ac:2397&mm=29&mn=sn-bg07dn6k&ms=rdu&mt=1683491824&mv=m&mvi=5&pl=50&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgcNCqYLJf1xtr-jGl2fSSz3gxqRA-iqR-kvvJsTzGtBYCIA4_AlB9eZ901w-yGTFI__avIE3OGynG0aRyh5Lng0K8"
                 type="audio/mp3" />
         </audio>
-
+      
 </body>
 
 </html>
-
+<script type="text/javascript" src="vanilla-tilt.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <canvas class="line-chart"></canvas>
 <script>
@@ -202,9 +191,5 @@
             responsive: true,
         }
     });
-
-
-
-
 
 </script>
