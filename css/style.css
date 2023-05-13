@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+
+/*----------------------------- IMAGEM INICIAL-----------------------------------*/
+
+
 html,
 body {
   width: 100vw;
@@ -12,13 +16,264 @@ body {
   background: url(https://img.freepik.com/fotos-gratis/girassois-linda-flor-no-campo_53876-14214.jpg?w=900&t=st=1683335303~exp=1683335903~hmac=9225810395c225d748467d820d3e23ff7acc5f40cd09ea3eb5d44dfbfe7264ce)
     no-repeat 65% 80%;
   background-size: cover;
-  background-color: rgb(249, 221, 221);
   background-blend-mode: multiply;
   overflow-x: hidden;
 }
 
-/*----------------------------- NAVBAR -----------------------------------*/
-.headerNav {
+.inicio {
+  width: 50vw;
+  height: 100vh;
+  margin-left: 50%;
+  border-radius: 2%;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.292);
+  backdrop-filter: (15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wel-text {
+  text-align: center;
+}
+
+.h1-title {
+  font-family: "Able", sans-serif;
+  font-size: 700%;
+  color: #e1a700;
+  text-shadow: 0.1em 0.1em 0.2em #dc2f02;
+}
+
+.h3-title {
+  font-family: "Vollkorn", "Cinzel", "Comfortaa";
+  font-size: 225%;
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0.2em #dc2f02;
+  line-height: 22px;
+}
+
+.title-divider {
+  border-top: 8px ridge #f48c06;
+}
+
+
+/*------------------------------  TEXTOS MEIO  ------------------------------------*/
+
+.meio {
+  background-color: #621708;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+
+.text{
+  display: flex;
+ margin-left: 4%;
+  flex-direction: column;
+}
+
+#text-1,
+#text-2 {
+  font-family: "EB Garamond", serif, "Comfortaa";
+  line-height: 1.5em;
+  text-align: justify;
+  color: wheat;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 90%;
+  font-size: 1.3em;
+}
+
+
+#text-1::first-letter,
+#text-2::first-letter {
+  font-family: "Kanit", sans-serif;
+  font-size: 6.5em;
+  font-weight: 700;
+  float: left;
+  line-height: 80px;
+  margin-right: 3px;
+  color: #f48c06;
+}
+
+.meio img {
+  filter: drop-shadow(25px -8px 21px #000000);
+}
+
+
+/*------------------------------  TEXTO MEIO 2   ------------------------------------*/
+
+.meio-2{
+  background-color: rgba(245, 222, 179, 0.292);
+  color: wheat;
+  padding: 30px 0 30px 0;
+  margin-bottom: 2rem;
+  text-align: justify;
+  }
+
+  .container-topicos, .label-1, .label-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .label-1{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+   }
+
+
+
+
+   /* ---------------------------------- MODAL -----------------------------------*/
+
+
+/*Logo em seguida nas estilizações, tem o estilo da div escondida em si, e também o pseudoelemento :target, que basicamente nesse caso faz aparecer o modal, trocando a sua visibilidade.*/
+
+.modal {
+  visibility: hidden;
+   position: absolute;
+   z-index: 1;
+   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.10s;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*E por fim tem a estilização do conteúdo em si, o texto centralizado, o rodapé e o botão para fechar.*/
+
+.content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background: #522727;
+  padding: 1em 2em;
+}
+
+.footer {
+  text-align: right;
+  margin-top: 50px;
+}
+
+.close {
+  position: absolute;
+  bottom: 3%;
+  left: 0.5%;
+  border-radius: 4px;
+  border: none;
+ color: #585858;
+  text-decoration: none;
+}
+
+.footer-btn-close {
+  width: 150px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #cfcca8;
+  color: #000000;
+  border-radius: 3px;
+}
+
+/*------------------- VOLTAR AO TOPO ---------------------------*/
+
+button {
+  position: absolute;
+  bottom: 3%;
+  left: 0.5%;
+  border-radius: 4px;
+  border: none;
+  padding: 15px 32px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: (15px);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+}
+
+a.button:link {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#img_tipo01{
+  animation: surgir 2s forwards cubic-bezier(0.1, 50, 0.8, 1);
+  white-space: normal;
+  overflow: hidden; 
+  width: 20%;
+  filter: drop-shadow(25px -8px 21px #000000);
+}
+
+@keyframes surgir {
+  from {
+     transform: translateY(1px);
+   }
+  to {
+     transform: translateY(10px);
+   } 
+ }   */
+
+/* #text-3{
+  color: wheat;
+  animation: surgir 2s backwards cubic-bezier(0.1, 50, 0.8, 1);
+  white-space: nowrap;
+  overflow: hidden; 
+font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------- NAVBAR ------ hsl(197, 19%, 15%);-----------------------------*/
+/* .headerNav {
   font-family: "Vollkorn", "poppins", "roboto", "sans-serif";
   font-size: 800;
   background-color: #0fd43d0c;
@@ -30,17 +285,15 @@ a {
   justify-content: end;
   list-style-type: none;
   text-decoration: none;
-
   color: #000000;
-  /* text-shadow: 1px 3px  #e5d8d8ff;*/
 }
 
 .headerNav li {
   margin: 1rem;
-}
+} */
 
 /*----------------------------- IMAGEM INICIAL-----------------------------------*/
-.wel-text {
+/* .wel-text {
   margin-top: 20%;
   margin-right: 70%;
   opacity: 0.8;
@@ -60,31 +313,31 @@ a {
 
 .h3-title {
   margin-top: 0.4rem;
-  font-family: "Comfortaa", cursive;
+  font-family: "Vollkorn", "Cinzel", "Comfortaa";
   font-size: 125%;
   color: #fff;
+  text-shadow: 0.1em 0.1em 0.2em #dc2f02;
   line-height: 22px;
-}
+} */
 
 /*----------------------------- INICIO DO CONTEXTO DA PÁGINA -----------------------------------*/
-.container-meio {
+/* .container-meio {
   margin-top: 10%;
-  background-color: #221b07;
+  background-color: #621708;
   color: antiquewhite;
-  height: 193%;
   width: 100%;
-}
+} */
 
-.container-meio h1 {
+/*.container-meio h1 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2%;
-  /* animation: surgir 18s steps(45) alternate infinite;
+   animation: surgir 18s steps(45) alternate infinite;
   white-space: nowrap;
-  overflow: hidden; */
+  overflow: hidden; 
 }
-/* 
+
 @keyframes surgir {
   from {
     width: 0;
@@ -94,10 +347,7 @@ a {
   }
 } */
 
-.title-divider {
-  border-top: 10px ridge #d1c33d;
-}
-
+/* 
 .text-1 {
   font-family: "EB Garamond", serif, "Comfortaa";
   text-align: justify;
@@ -112,10 +362,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.credit img {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 img {
@@ -138,43 +385,67 @@ img {
   float: left;
   line-height: 80px;
   margin-right: 3px;
-  color: #746057;
+  color: #f48c06;
 }
 
-/*----------------------------- GRÁFICO PIZZA 01 -----------------------------------*/
-
-.container-grafico {
-  background-color: #d1c33d;
+#caminho_abelha {
+  position: relative;
+  top: 10px;
+  left: 800px;
+  width: 180px;
+} */
+/*-------------------------- DADOS GRAFICO PIZZA 01 --------------------------------------------*/
+/* 
+.container-dados {
+  background-color: #dfce3a;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+}
+
+.container-dados p {
+  margin-top: 1rem;
+  max-width: 40rem;
+  text-align: center;
+  line-height: 1.5rem;
+  text-shadow: 0.1em 0.1em 0.2em black;
+} */
+
+/*----------------------------- GRÁFICO PIZZA 01 -----------------------------------*/
+/* 
+.container-grafico {
+  background-color: #dfce3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .grafico {
-  margin-top: 20rem;
   width: 30%;
 }
 
 #grafico01 {
   position: static;
+  margin-top: 100rem;
 }
 
-#seta01 {
-  width: 40%;
+#seta_sudeste {
+  width: 30%;
   position: relative;
-  top: 400px;
-  right: 40px;
+  bottom: 1500px;
+  left: 50px;
   filter: contrast(70%);
 }
 
-#seta02 {
+#seta02_centroOeste {
   width: 40%;
   position: relative;
   bottom: 480px;
   left: 400px;
   /* transform: rotate(90deg); */
-  transform: scaleX(-1);
+/* transform: scaleX(-1);
   filter: contrast(70%);
 }
 
@@ -187,135 +458,152 @@ img {
   filter: contrast(70%);
 }
 
-#porcentagem01 {
-  font-size: 200px;
+#porcentagem01_centroOeste {
   position: relative;
-  bottom:700px;
+  bottom: 600px;
   left: 680px;
-  font-family: 'Indie Flower', sans-serif;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 200px;
 }
 
 #text-porcent01 {
   position: relative;
-  bottom: 750px;
-  left: 620px;
+  bottom: 680px;
+  left: 640px;
   max-width: 410px;
   text-align: justify;
   font-weight: bold;
 }
 
-#porcentagem02 {
+#porcentagem02_sul {
   width: 40%;
   position: relative;
-  top: 300px;
-  right: 600px;
+  bottom: 60px;
+  left: 20px;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 200px;
 }
 
 #text-porcent02 {
   position: relative;
-  top: 350px;
-  right: 450px;
+  bottom: 150px;
+  right: 40px;
   max-width: 410px;
   text-align: justify;
   font-weight: bold;
 }
 
-#porcentagem03 {
+#porcentagem03_sudeste {
   width: 40%;
   position: relative;
-  bottom: 600px;
-  right: 600px;
+  bottom: 1600px;
+  right: 550px;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 200px;
 }
 
 #text-porcent03 {
   position: relative;
-  bottom: 550px;
-  right: 450px;
+  bottom: 1680px;
+  right: 600px;
   max-width: 410px;
   text-align: justify;
   font-weight: bold;
 }
 
+#porcentagem04_nordeste {
+  width: 40%;
+  position: relative;
+  bottom: 1680px;
+  right: 480px;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 200px;
+}
+
+#text-porcent04 {
+  position: relative;
+  bottom: 1770px;
+  right: 570px;
+  max-width: 410px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+#porcentagem05_norte {
+  width: 40%;
+  position: relative;
+  bottom: 2400px;
+  left: 750px;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 200px;
+}
+
+#text-porcent05 {
+  position: relative;
+  bottom: 2480px;
+  left: 650px;
+  max-width: 410px;
+  text-align: justify;
+  font-weight: bold;
+} */
+
 /*----------------------------- GRÁFICO PIZZA 02 e 03 -----------------------------------*/
-
-.container-grafico02 {
-  background-color: #2d2301;
-}
-
-.grafico02 {
+/* 
+.container_grafico02 {
+  background-color: #733e03;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  align-content: space-around;
-  width: 30%;
-  margin-left: 20%;
-}
-#grafico02,
-#grafico03 {
-  padding: 2rem;
 }
 
+.grafico02_producao_oleo {
+  width: 50%;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+}
+
+.container_dados02 {
+  background-color: #733e03;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.container_dados02 p {
+  margin: 2rem 1rem;
+  max-width: 55rem;
+  line-height: 1.5rem;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#paragrafo_grafico03 {
+  margin-right: 100px;
+  padding: 30px;
+} */
 /*----------------------------- BOTÃO VOLTAR AO TOPO -----------------------------------*/
 
-button {
-  position: absolute;
-  bottom: 3%;
-  left: 0.5%;
-  border-radius: 4px;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: (15px);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  font-style: normal;
-  font-size: 20px;
-  z-index: 99;
-}
 
-a.button:link {
-  text-decoration: none;
-}
 
 /*----------------------------- FOOTER -----------------------------------*/
-
+/* 
 .footer {
- background: url(https://blog4.mfrural.com.br/wp-content/uploads/2021/03/girassol-capa-001.jpg) no-repeat;
- background-size: 100% 150%;
- overflow: hidden;
-object-fit: cover;
-background-color:#424747; 
-background-blend-mode: multiply;
+  background: url(https://blog4.mfrural.com.br/wp-content/uploads/2021/03/girassol-capa-001.jpg)
+    no-repeat;
+  background-size: 100% 150%;
+  overflow: hidden;
+  object-fit: cover;
+  background-color: #424747;
+  background-blend-mode: multiply;
 }
 
-.footerContainer,
-.container-1,
-.container-3 {
+.footerContainer {
   display: flex;
- flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
-  margin-top: 2%;
-  margin-bottom: 1%;
-}
-
-.paragrafoFooter {
-  margin-bottom: 3%;
-  margin-top: 1.9%;
-}
-
-.primeiro_texto h2 {
-  margin-bottom: 4%;
-}
-.segundo_texto h2 {
-  margin-bottom: 4%;
-}
-.contato h2,
-p {
-  margin-bottom: 1%;
-} 
+  width: 100%;
+} */
 
 /*----------------------------- SCROLL -----------------------------------*/
 ::-webkit-scrollbar {
