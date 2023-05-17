@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-------------------  Gráfico PIZZA 01-------------------->
+        <p id="text-dados"> A produção de girassol no Brasil está concentrada em algumas regiões do país,
+            principalmente no
+            Centro-Oeste, Sul e Sudeste. Segue abaixo a produção de girassol por região, de acordo com dados do
+        </p>
+        <div class="container_dados02">
+            <p id="porcentagem02_sul">20%</p>
+            <p>Sul: É a segunda maior região produtora de girassol do país,
+                representando
+                cerca
+                de 20% da produção total. Os estados do Rio Grande do Sul, Paraná e Santa Catarina são os
+                maiores
+                produtores da região. Em 2020, a produção de girassol na região Sul foi de cerca de 242 mil
+                toneladas. </p>
+            <p id="porcentagem01_centroOeste">65%</p>
+            <p> Centro-Oeste: É a região com maior produção de girassol do país, e
+                concentra
+                cerca de 65% da produção total. Os estados de Mato Grosso e Goiás são os maiores produtores
+                da
+                região. Em 2020, a produção de girassol no Centro-Oeste foi de aproximadamente 708 mil
+                toneladas.
+            </p>
+            <p id="porcentagem03_sudeste">10%</p>
+            <p>Sudeste: É a terceira maior região produtora de girassol do país, com uma
+                participação de cerca de 10% na produção total. São Paulo é o estado com maior produção de
+                girassol
+                na região. Em 2020, a produção de girassol no Sudeste foi de aproximadamente 131 mil
+                toneladas.
+                .
+            </p>
+            <p id="porcentagem04_nordeste">14%</p>
+            <p>Nordeste: A produção de girassol no Nordeste é relativamente baixa,
+                representando
+                apenas cerca de 14% da produção total. Os estados da Bahia e Piauí são os maiores produtores
+                da
+                região. Em 2020, a produção de girassol no Nordeste foi de cerca de 49 mil toneladas.</p>
+            <p id="porcentagem05_norte">1%</p>
+            <p>Norte: A produção de girassol na região Norte é ainda mais baixa,
+                representando
+                somente cerca de 1% da produção total. Os estados de Rondônia e Tocantins são os maiores
+                produtores
+                da região. Em 2020, a produção de girassol no Norte foi de apenas 10 mil toneladas.</p>
+        </div>
+    
+        <div class="container_grafico02">
+            <div class="grafico02_producao_oleo">
+                <canvas id="grafico02"></canvas>
+            </div>
+            <p id="paragrafo_grafico03"> A produção de óleo de girassol é uma importante atividade econômica em
+                todo o mundo. Segundo dados da Organização das Nações Unidas para a Alimentação e Agricultura
+                (FAO), a produção mundial de óleo de girassol em 2021/2022 será de cerca de 19,9 milhões de
+                toneladas sendo a Rússia o maior produtor mundial de óleo de girassol, com estimativa de
+                produzir cerca de 5,8 milhões de toneladas, seguida pela Ucrânia, que estima-se produzir cerca
+                de 5,6 milhões de toneladas. Ainda de acordo com a FAO os principais óleos vegetais produzidos
+                no mundo: </p>
+        </div>
+
+        
+
+        <div class="grafico02_producao">
+            <canvas id="grafico01"></canvas>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas class="line-chart"></canvas>
+<script>
+
+    var audio = document.getElementById('audio');
+
+    function diminuir_volume() {
+        if (audio.volume > 0) {
+            audio.volume -= 0.8;
+        }
+    }
+
+    const ctx01 = document.getElementById('grafico01');
+
+    new Chart(ctx01, {
+        type: 'pie',
+        data: {
+            labels: ['Centro-Oeste', 'Sul', 'Nordeste', 'Sudeste', 'Norte'],
+            datasets: [{
+                data: [65, 20, 14, 10, 1],
+                borderWidth: 1,
+                backgroundColor: [
+                    '#FDDE2B',
+                    '#E3B427',
+                    '#FAB537',
+                    '#E38B27',
+                    '#FD7C2B'
+                ],
+                hoverOffset: 4,
+                borderColor: '#322b17',
+                borderWidth: 1,
+                color: 'white',
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+
+    const ctx02 = document.getElementById('grafico02');
+
+    new Chart(ctx02, {
+        type: 'pie',
+        data: {
+            labels: ['Óleo de Palma', 'Óleo de Soja', 'Óleo de Canola', 'óleo de Girassol', 'Óleo de amendoim', 'Óleo de Milho'],
+            datasets: [{
+                data: [33, 25, 13, 9, 5, 4],
+                borderWidth: 1,
+                backgroundColor: [
+                    '#FDDE2B',
+                    '#E3B427',
+                    '#FAB537',
+                    '#E38B27',
+                    '#FD7C2B',
+                    '#FAB837'
+                ],
+                hoverOffset: 4,
+                borderColor: '#322b17',
+                borderWidth: 1,
+                color: 'white',
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+    });
+
+</script>

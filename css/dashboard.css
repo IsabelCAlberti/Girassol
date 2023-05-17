@@ -1,0 +1,48 @@
+
+
+/*----------------------------- GRÁFICO -----------------------------------*/
+
+.container_grafico01, .container_dados02  {
+    display: flex;
+    background-color: #621708;
+   }
+  
+  .grafico02_producao {
+    width: 80%;
+  margin-left: 10%;
+  margin-top: 12%;
+  }
+  
+  .container_dados02 #porcentagem01_centroOeste, #porcentagem02_sul, #porcentagem03_sudeste, #porcentagem04_nordeste, #porcentagem05_norte {
+  font-family: "Indie Flower", sans-serif;
+    font-size: 30px;
+    color: antiquewhite;
+    margin: 0 1%;
+  }
+  
+  .container_dados02 , .container_grafico02{
+    color: antiquewhite;
+    background-color: #621708;
+    text-align: justify;
+    font-size: 20px;
+  }
+  
+  .grafico02_producao_oleo{
+    width: 40%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .container_grafico02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #paragrafo_grafico03{
+    max-width: 50%;
+  }
+  
+  #grafico02{
+    margin: 1% 0;
+  }
