@@ -2,226 +2,207 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/jogoForca.css">
-     <title>Jogo Forca | Girassol</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste01.css">
+    <title>Jogo da Forca</title>
 </head>
-<html>
 
 <body>
-
-     <head>
-          <title>Jogo da Forca</title>
-     </head>
-
-     <body>
-          <div class="boxContainer">
-               <div id="box-secreta">
-                    DESCUBRA A PALAVRA SECRETA
-                    <div id="palavra-secreta">-----------</div>
-               </div>
-          </div>
-
-          <div class="boxContainer">
-               <div id="box-tentativas">
-                    <label> Nome do Jogador: </label><input id="ipt_nomeJogador" type="text">
-                    <button onclick="registrarNomeJogador()"> Vamos Nessa! </button>
-                    Tentativas: 7
-               </div>
-          </div>
-          <div class="boxContainer">
-               <div id="boxResposta"></div>
-          </div>
-          <div class="boxContainer">
-               <div class="box-letra" id="tecla-A" onclick="verificaLetraEscolhida('A')">A</div>
-               <div class="box-letra" id="tecla-B" onclick="verificaLetraEscolhida('B')">B</div>
-               <div class="box-letra" id="tecla-C" onclick="verificaLetraEscolhida('C')">C</div>
-               <div class="box-letra" id="tecla-Ç" onclick="verificaLetraEscolhida('Ç')">Ç</div>
-               <div class="box-letra" id="tecla-D" onclick="verificaLetraEscolhida('D')">D</div>
-               <div class="box-letra" id="tecla-E" onclick="verificaLetraEscolhida('E')">E</div>
-               <div class="box-letra" id="tecla-F" onclick="verificaLetraEscolhida('F')">F</div>
-               <div class="box-letra" id="tecla-G" onclick="verificaLetraEscolhida('G')">G</div>
-               <div class="box-letra" id="tecla-H" onclick="verificaLetraEscolhida('H')">H</div>
-               <div class="box-letra" id="tecla-I" onclick="verificaLetraEscolhida('I')">I</div>
-          </div>
-          <div class="boxContainer">
-               <div class="box-letra" id="tecla-J" onclick="verificaLetraEscolhida('J')">J</div>
-               <div class="box-letra" id="tecla-K" onclick="verificaLetraEscolhida('K')">K</div>
-               <div class="box-letra" id="tecla-L" onclick="verificaLetraEscolhida('L')">L</div>
-               <div class="box-letra" id="tecla-M" onclick="verificaLetraEscolhida('M')">M</div>
-               <div class="box-letra" id="tecla-N" onclick="verificaLetraEscolhida('N')">N</div>
-               <div class="box-letra" id="tecla-O" onclick="verificaLetraEscolhida('O')">O</div>
-               <div class="box-letra" id="tecla-P" onclick="verificaLetraEscolhida('P')">P</div>
-               <div class="box-letra" id="tecla-Q" onclick="verificaLetraEscolhida('Q')">Q</div>
-               <div class="box-letra" id="tecla-R" onclick="verificaLetraEscolhida('R')">R</div>
-          </div>
-          <div class="boxContainer">
-               <div class="box-letra" id="tecla-S" onclick="verificaLetraEscolhida('S')">S</div>
-               <div class="box-letra" id="tecla-T" onclick="verificaLetraEscolhida('T')">T</div>
-               <div class="box-letra" id="tecla-U" onclick="verificaLetraEscolhida('U')">U</div>
-               <div class="box-letra" id="tecla-V" onclick="verificaLetraEscolhida('V')">V</div>
-               <div class="box-letra" id="tecla-W" onclick="verificaLetraEscolhida('W')">W</div>
-               <div class="box-letra" id="tecla-X" onclick="verificaLetraEscolhida('X')">X</div>
-               <div class="box-letra" id="tecla-Y" onclick="verificaLetraEscolhida('Y')">Y</div>
-               <div class="box-letra" id="tecla-Z" onclick="verificaLetraEscolhida('Z')">Z</div>
-               <a href="jogoForca.html">
-                    <div class="box-letra"><img
-                              src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/2x/fa314a/external-reload-arrows-vitaliy-gorbachev-fill-vitaly-gorbachev.png"
-                              alt="Reiniciar Jogo">
-               </a>
-          </div>
-          </div>
-
-     </body>
-
-</html>
+    <div class="box-container">
+        <div id="box-secreta">
+            DESCUBRA A PALAVRA SECRETA
+            <div id="palavra-secreta">xx</div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div id="box-tentativas">
+            <label> Nome do Jogador: </label><input id="ipt_nomeJogador" type="text">
+            <button onclick="registrarNomeJogador()"> Vamos Nessa! </button>
+            TENTATIVAS: 7
+        </div>
+    </div>
+    <div class="box-container">
+        <div id="boxResposta"></div>
+    </div>
+    <div class="box-container">
+        <div class="box-letra" id="tecla-A" onclick="verificaLetraEscolhida('A')">A</div>
+        <div class="box-letra" id="tecla-B" onclick="verificaLetraEscolhida('B')">B</div>
+        <div class="box-letra" id="tecla-C" onclick="verificaLetraEscolhida('C')">C</div>
+        <div class="box-letra" id="tecla-D" onclick="verificaLetraEscolhida('D')">D</div>
+        <div class="box-letra" id="tecla-E" onclick="verificaLetraEscolhida('E')">E</div>
+        <div class="box-letra" id="tecla-F" onclick="verificaLetraEscolhida('F')">F</div>
+        <div class="box-letra" id="tecla-G" onclick="verificaLetraEscolhida('G')">G</div>
+        <div class="box-letra" id="tecla-H" onclick="verificaLetraEscolhida('H')">H</div>
+        <div class="box-letra" id="tecla-I" onclick="verificaLetraEscolhida('I')">I</div>
+    </div>
+    <div class="box-container">
+        <div class="box-letra" id="tecla-J" onclick="verificaLetraEscolhida('J')">J</div>
+        <div class="box-letra" id="tecla-K" onclick="verificaLetraEscolhida('K')">K</div>
+        <div class="box-letra" id="tecla-L" onclick="verificaLetraEscolhida('L')">L</div>
+        <div class="box-letra" id="tecla-M" onclick="verificaLetraEscolhida('M')">M</div>
+        <div class="box-letra" id="tecla-N" onclick="verificaLetraEscolhida('N')">N</div>
+        <div class="box-letra" id="tecla-O" onclick="verificaLetraEscolhida('O')">O</div>
+        <div class="box-letra" id="tecla-P" onclick="verificaLetraEscolhida('P')">P</div>
+        <div class="box-letra" id="tecla-Q" onclick="verificaLetraEscolhida('Q')">Q</div>
+        <div class="box-letra" id="tecla-R" onclick="verificaLetraEscolhida('R')">R</div>
+    </div>
+    <div class="box-container">
+        <div class="box-letra" id="tecla-S" onclick="verificaLetraEscolhida('S')">S</div>
+        <div class="box-letra" id="tecla-T" onclick="verificaLetraEscolhida('T')">T</div>
+        <div class="box-letra" id="tecla-U" onclick="verificaLetraEscolhida('U')">U</div>
+        <div class="box-letra" id="tecla-V" onclick="verificaLetraEscolhida('V')">V</div>
+        <div class="box-letra" id="tecla-W" onclick="verificaLetraEscolhida('W')">W</div>
+        <div class="box-letra" id="tecla-X" onclick="verificaLetraEscolhida('X')">X</div>
+        <div class="box-letra" id="tecla-Y" onclick="verificaLetraEscolhida('Y')">Y</div>
+        <div class="box-letra" id="tecla-Z" onclick="verificaLetraEscolhida('Z')">Z</div>
+        <div class="box-letra">
+            <a href="jogoForca.html"><img
+                    src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/2x/fa314a/external-reload-arrows-vitaliy-gorbachev-fill-vitaly-gorbachev.png"
+                    alt="Reiniciar Jogo"></a>
+        </div>
+    </div>
+</body>
 
 </html>
 <script>
-
-     var letrasDigitadas = [];
-     var palavraSecretaPorLetra = [];
-     var listaDinamica = [];
-     var listaNomeJogador = [];
-     var tentativas = 7;
-
+    var letrasDigitadas = [];
+    var palavraSecretaPorLetra = [];
+    var listaDinamica = [];
+    var listaNomeJogador = [];
+    var tentativas = 7;
     var palavras = ['GIRASSOL',
-          'BIOCOMBUSTIVEL',
-          'HELIOTROPISMO',
-          'AMARELO',
-          'OLEO DE GIRASSOL',
-          'ECONOMIA',
-          'PRODUÇAO',
-          'SEMENTE',
-          'HOLAMBRA',
-          'ABELHA',
-          'ASTECAS',
-          'ALIMENTAÇÃO',
-           'NORTE',
-          'CENTRO - OESTE',
-          'SUL',
-          'SUDESTE'];
+        'BIOCOMBUSTIVEL',
+        'HELIOTROPISMO',
+        'AMARELO',
+        'OLEO DE GIRASSOL',
+        'ECONOMIA',
+        'PRODUÇAO',
+        'SEMENTE',
+        'HOLAMBRA',
+        'ABELHA',
+        'ASTECAS',
+        'ALIMENTACAO',
+        'NORTE',
+        'SUL',
+        'SUDESTE'];
 
-     // cria a palavra secreta
-     var palavraSecreta = criarPalavraSecreta();
+    // cria a apalavra secreta
+    var palavraSecreta = criarPalavraSecreta();
 
-     // cria uma lista com a palavra secreta separado na lista por cada letra
-     palavraSecretaPorLetra = palavraSecreta.split('');
+    // cria uma lista com a palavra secreta separado na lista por cada letra
+    palavraSecretaPorLetra = palavraSecreta.split('');
 
-     // monta a quantidade de espaços da palavra na tela
-     montarPalavraNaTela(palavraSecretaPorLetra)
+    // monta a quantidade de espaços da palavra na tela
+    montarPalavraNaTela(palavraSecretaPorLetra)
 
-     // FUNÇÕES
-     function registrarNomeJogador() {
-          var jogador = ipt_nomeJogador.value;
-          listaNomeJogador.push(jogador);
-          boxResposta.innerHTML = `Bem-Vindo ${jogador.toUpperCase()}!`
-     }
+    /////////////////////////// FUNÇÕES
 
-     function criarPalavraSecreta(){
-     // gera um indice aleatório entre 0 e 30 para servir de apoio na escolha da palavra que está na lista
-     var indexPalavra = parseInt(Math.random() * 31 );
-     // passa o indice sorteado para a lista referenciar a palavra Secreta
-     var palavraSecreta = palavras[indexPalavra];
-     return palavraSecreta
-}
+    function registrarNomeJogador() {
+        var jogador = ipt_nomeJogador.value;
+        listaNomeJogador.push(jogador);
+        boxResposta.innerHTML = `Bem-Vindo ${jogador.toUpperCase()}!`
+    }
 
-function montarPalavraNaTela(palavraSecreta){
-     var palavraTela = document.getElementById("palavra-secreta");
-      palavraTela.innerHTML = ""
-     for(i = 0; i < palavraSecreta.length; i++ ){ 
-          if(listaDinamica[i] == undefined){
-               listaDinamica[i] = "&nbsp;"
-               palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>"+ listaDinamica[i] +"</div>"
-          } 
-          else{
-               palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>"+ listaDinamica[i] +"</div>"
-          }
-     }
-}
+    function criarPalavraSecreta() {
+        // gera um indice aleatório entre 0 e 30 para servir de apoio na escolha da palavra que está na lista
+        var indexPalavra = parseInt(Math.random() * 16);
+        // passa o indice sorteado para a lista referenciar a palavra Secreta
+        var palavraSecreta = palavras[indexPalavra];
+        return palavraSecreta
+    }
+    function montarPalavraNaTela(palavraSecreta) {
+        var palavraTela = document.getElementById("palavra-secreta");
+        palavraTela.innerHTML = ""
+        for (i = 0; i < palavraSecreta.length; i++) {
+            if (listaDinamica[i] == undefined) {
+                listaDinamica[i] = "&nbsp;"
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>"
+            }
+            else {
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>"
+            }
+        }
+    }
 
-function verificaLetraEscolhida(letra){
-      if(tentativas > 0){
-           var resposta = document.getElementById("box-resposta")
-           resposta.innerText = "";
-           if(verificaSeLetraNaoFoiDigitada(letra)  == 0) { // lista vazia e primeira letra escolhida   
-               mudarStyleLetra("tecla-" + letra) 
-               comparaListas(letra)
-               montarPalavraNaTela(palavraSecreta)
-           }
-           else if(verificaSeLetraNaoFoiDigitada(letra) == 1){//letra repetida
-               resposta.innerText = "A letra >>> " + letra + " <<< já foi usada"    
-           }
-           else{//letra nova
-               letrasDigitadas.push(letra);
-               mudarStyleLetra("tecla-" + letra)
-               comparaListas(letra)
-               montarPalavraNaTela(palavraSecreta)
-           }
-      } 
-}
-
-function verificaSeLetraNaoFoiDigitada(letra){
-     response = 0;
-     if(letrasDigitadas.length < 1){
-          letrasDigitadas.push(letra);       
-          response =  0;
-     }
-     else{
-          for(i = 0; i <= letrasDigitadas.length; i++){
-               if(letra == letrasDigitadas[i]){
+    function verificaLetraEscolhida(letra) {
+        if (tentativas > 0) {
+            var resposta = document.getElementById("boxResposta")
+            resposta.innerText = "";
+            if (verificaSeLetraNaoFoiDigitada(letra) == 0) { // lista vazia e primeira letra escolhida   
+                mudarStyleLetra("tecla-" + letra)
+                comparaListas(letra)
+                montarPalavraNaTela(palavraSecreta)
+            }
+            else if (verificaSeLetraNaoFoiDigitada(letra) == 1) {//letra repetida
+                resposta.innerText = "A letra >>> " + letra + " <<< já foi usada"
+            }
+            else {//letra nova
+                letrasDigitadas.push(letra);
+                mudarStyleLetra("tecla-" + letra)
+                comparaListas(letra)
+                montarPalavraNaTela(palavraSecreta)
+            }
+        }
+    }
+    function verificaSeLetraNaoFoiDigitada(letra) {
+        response = 0;
+        if (letrasDigitadas.length < 1) {
+            letrasDigitadas.push(letra);
+            response = 0;
+        }
+        else {
+            for (i = 0; i <= letrasDigitadas.length; i++) {
+                if (letra == letrasDigitadas[i]) {
                     // se o retorno for maior ou igual a 0 existe no array o valor procurado
-                    if(function jaTemLetra() {
-                          return  (letrasDigitadas.indexOf(letra) >= 0);
-                    }){
-                         return response =  1
-                    }     
-               }
-               else{
-                    response =  2;
-               }
-          }
-     } 
-     return response;
- }
+                    if (function jaTemLetra() {
+                        return (letrasDigitadas.indexOf(letra) >= 0);
+                    }) {
+                        return response = 1
+                    }
+                }
+                else {
+                    response = 2;
+                }
+            }
+        }
+        return response;
+    }
+    function mudarStyleLetra(tecla) {
+        document.getElementById(tecla).style.background = "#f48c06;"
+        document.getElementById(tecla).style.color = "#FFFFFF"
+    }
+    function comparaListas(letra) {
+        var resposta = document.getElementById("boxResposta")
+        var pos = palavraSecretaPorLetra.indexOf(letra);
+        if (pos < 0) {// significa que a letra não existe na palavra secreta
+            tentativas--
+            var tentativasRestantes = document.getElementById("box-tentativas")
+            tentativasRestantes.innerHTML = " Errou, tente outra letra! TENTATIVAS : " + tentativas
 
- function mudarStyleLetra(tecla){
-      document.getElementById(tecla).style.background="#f48c06;" 
-      document.getElementById(tecla).style.color="#FFFFFF"  
-}
-   
-function comparaListas(letra){
-      var resposta = document.getElementById("box-resposta")
-      var pos = palavraSecretaPorLetra.indexOf(letra);
-      if(pos < 0){// significa que a letra não existe na palavra secreta
-           tentativas--
-           var tentativasRestantes = document.getElementById("box-tentativas")
-           tentativasRestantes.innerHTML = "TENTATIVAS : " + tentativas
-               //boxResposta.innerHTML = `Errou, tente outra letra! <iframe src="https://giphy.com/embed/jRBZgj1yxuvmGK1dyG" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/salonline-shameless-shame-vergonha-jRBZgj1yxuvmGK1dyG">via GIPHY</a></p>`
-               if(tentativas == 0){  
+            if (tentativas == 0) {
                 resposta.innerHTML = "FIM : A PALAVRA SECRETA ERA - " + palavraSecreta
-           }
-      }
-      else{
-          for(i = 0; i < palavraSecretaPorLetra.length; i++){
-               if(palavraSecretaPorLetra[i] == letra){
-                    listaDinamica[i] = palavraSecretaPorLetra[i];   
-                        // resposta.innerHTML += `<iframe src="https://giphy.com/embed/y89o3NXPZffwYEssd6" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/westvirginiau-mountaineer-wvu-mascot-y89o3NXPZffwYEssd6"></a></p>`
-                    }    
-          }   
-      } 
-      var vitoria = "sim";
-      for (var i = 0; i < palavraSecretaPorLetra.length; i++) {
-           if (listaDinamica[i] != palavraSecretaPorLetra[i]) { 
+            }
+        }
+        else {
+            for (i = 0; i < palavraSecretaPorLetra.length; i++) {
+                if (palavraSecretaPorLetra[i] == letra) {
+                    listaDinamica[i] = palavraSecretaPorLetra[i];
+                }
+            }
+        }
+        var vitoria = "sim";
+        for (var i = 0; i < palavraSecretaPorLetra.length; i++) {
+            if (listaDinamica[i] != palavraSecretaPorLetra[i]) {
                 vitoria = "não"
-           }
-      }
-      if(vitoria == "sim"){
-           resposta.innerHTML = "PARABÉNS"  
-           tentativas = 0;
-      }   
- }
+            }
+        }
+        if (vitoria == "sim") {
+            resposta.innerHTML = "PARABÉNS, você acertpu a palavra!"
+            tentativas = 0;
+        }
+    }
+
 
 </script>
