@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2? family= Amatic+SC & family= Cinzel:wght@400;500;600;700;800;900 & family= Indie+Flower & família= Marcador+Permanente & família= Sigmar & família= Vollkorn:wght@400;500;600;700 & display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*----------------------------- IMAGEM INICIAL-----------------------------------*/
+
+  html, body{
+    background: url(https://img.freepik.com/fotos-gratis/girassois-linda-flor-no-campo_53876-14214.jpg?w=900&t=st=1683335303~exp=1683335903~hmac=9225810395c225d748467d820d3e23ff7acc5f40cd09ea3eb5d44dfbfe7264ce)
+    no-repeat 65% 45%;
+    width: 100%;
+    height: 100vh;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color:rgba(251, 226, 0, 0.734);
+}
+
+
+
+
+/*----------------------------- FOOTER -----------------------------------*/
+
+.footer{
+  background-color: #621708;
+  text-align: center;
+  color: wheat;
+}
+
+
+/*----------------------------- SCROLL -----------------------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+} /* tamanho da linha*/
+
+::-webkit-scrollbar-track {
+  background-color: #eba346;
+} /* cor de fundo do scrool*/
+
+::-webkit-scrollbar-thumb {
+  background-color: #322b17;
+  border-radius: 20px;
+} /* cor da barra de rolagem*/
