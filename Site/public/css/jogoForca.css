@@ -22,7 +22,7 @@ img {
 }
 
 #palavra-secreta {
-  color: rgba(251, 226, 0, 0.734);
+  color: #391c19ba;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -32,29 +32,28 @@ img {
 }
 
 #box-secreta {
-  border: 1px solid rgba(251, 226, 0, 0.734);
+  border: 1px solid #391c19ba;
   text-align: center;
-  box-shadow: 0px 2px 8pxrgba(251, 226, 0, 0.734);
-  -moz-box-shadow: 0px 2px 8px rgba(251, 226, 0, 0.734);
-  -webkit-box-shadow: 0px 2px 8px rgba(251, 226, 0, 0.734);
+  box-shadow: 0px 2px 8px #391c19ba; 
+  -moz-box-shadow: 0px 2px 8px #391c19ba;
+  -webkit-box-shadow: 0px 2px 8px #391c19ba;
   color: #f48c06;
   width: 350px;
   height: 200px;
-  font-size: 1em;
   margin-top: 10px;
   padding: 10px;
 }
 
 .box-letra {
-  border: 1px solid rgba(251, 226, 0, 0.734);
+  border: 1px solid #391c19ba;
   text-align: center;
-  box-shadow: 0px 2px 8px rgba(251, 226, 0, 0.734); 
+  box-shadow: 0px 2px 8px #391c19ba; 
   color: #f48c06;
   cursor: pointer;
 }
 
 .box-letra:hover {
-  color: rgba(251, 226, 0, 0.734);
+  color: #391c19ba;
 }
 
 #box-tentativas {
@@ -64,18 +63,16 @@ img {
   height: 20px;
   margin-top: 20px;
   padding: 5px 0px;
-  font-size: 1em;
 }
 
 #boxResposta {
   text-align: center;
   color: #fff;
-  background-color: rgba(251, 226, 0, 0.734);
+  background-color: #391c19ba;
   width: 350px;
   height: 20px;
   margin-top: 20px;
   padding: 5px 0px;
-  font-size: 0.7em;
 }
 
 input {
@@ -84,7 +81,7 @@ input {
 }
 
 button {
-  background-color: rgba(251, 226, 0, 0.734);
+  background-color: #391c19ba;
   color: #fff;
   padding: 10px;
 }
@@ -137,7 +134,7 @@ button {
     cursor: pointer;
   }
   .box-letra:hover {
-    color: rgba(251, 226, 0, 0.734);
+    color: #391c19ba;
     font-size: 2em;
     cursor: pointer;
     margin: 8.5px;
@@ -171,7 +168,7 @@ button {
   #box-secreta {
     width: 980px;
     height: 300px;
-    border: 1px solid rgba(251, 226, 0, 0.734);
+    border: 1px solid #391c19ba;
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
@@ -181,7 +178,7 @@ button {
   .box-letra {
     width: 90px;
     height: 90px;
-    border: 1px solid rgba(251, 226, 0, 0.734);
+    border: 1px solid #391c19ba;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -189,13 +186,13 @@ button {
   }
 
   .box-letra:hover {
-    color: rgba(251, 226, 0, 0.734);
+    color: #391c19ba;
     font-size: 4.5em;
     padding: 2px;
   }
 
   .letras {
-    border-bottom: 3px solid rgba(251, 226, 0, 0.734);
+    border-bottom: 3px solid #391c19ba;
     width: 30px;
     margin-left: 10px;
     margin-right: 10px;
@@ -223,10 +220,10 @@ button {
 @media (max-width: 1199.98px) {
 }
 
-iframe{
+/* iframe{
 position: absolute;
-z-Index: 9;
+z-Index: 2;
 top: 50%; 
 left: 50%; 
 transform: translate(-50%, -50%);
-}
+} */
