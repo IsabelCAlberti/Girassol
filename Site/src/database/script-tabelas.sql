@@ -12,7 +12,6 @@ use girassol;
 
 DROP database girassol;
 
-
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
@@ -23,7 +22,7 @@ CREATE TABLE aviso (
 	idComentario INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
-    classificacao CHAR(1),
+    classificacao INT,
     util CHAR(1),
 	fk_usuario INT,
     constraint usuariofk
