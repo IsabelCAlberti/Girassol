@@ -122,9 +122,9 @@
                     </a>
                 </div>
                 <div class="card-s2">
-                    <a href="dashboard.html">
+                    <a href="usos.html">
                         <img src="../assets/icons/economy-icon.png" alt=""></a>
-                    <a href="dashboard.html" target="_blank">
+                    <a href="usos.html" target="_blank">
                         <p>Economia e Girassol</p>
                     </a>
                 </div>
@@ -132,14 +132,13 @@
         </section>
     </div>
 
-
     <!------------------- Comentários -------------------->
 
     <div class="comentarios">
         <div class="container">
             <h1 style="  font-size: 60px;">Deixe seu Comentário</h1>
             <div class="div-form">
-                <form id="form_postagem" method="post" onsubmit="return publicar()">
+                <div id="form_postagem">
                     <br>
                     <h5 style="text-align: center;">*É necessário cadastrar seu nome e e-mail*</h5>
                     <br>
@@ -149,7 +148,7 @@
                         <span class="texto_email">Email: </span>
                         <input class="email_input" id="email_input" type="text" placeholder="meuemail@provedor.com">
                     </div>
-                    <button style="margin-top: 3%; padding: 10px 40px;" class="botao" id="btn-cadastrar"
+                    <button style="margin-top: 3%; padding: 10px 40px;" class="botao" id="btnCadastrar"
                         onclick="cadastrar()">Cadastrar</button>
                     <div class="comentario">
                         <span class="texto_titulo">Título: </span>
@@ -187,7 +186,7 @@
                     </div>
                     <button style="margin-top: 3%; padding: 10px 40px;" onclick="publicar()" type="submit"
                         id="botao_publicar">Publicar</button>
-                </form>
+                </div>
             </div>
         </div>
         <div id="mensagemAvaliacao"></div>
@@ -208,6 +207,7 @@
     </div>
 
 </body>
+
 </html>
 <script>
 
@@ -237,20 +237,13 @@
             })
         }).then(function (res, error) {
             if (res.ok) {
-                res.status(200).json({ message: 'Usuário cadastrado com sucesso' });
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
-                setTimeout(() => {
-                    const btnCadastrar = document.querySelector('#btn-cadastrar');
-                    btnCadastrar.addEventListener('click', () => {
-                        btnCadastrar.style.display = 'none'
-                    })
-                }, "1000")
+                mensagemAvaliacao.innerHTML = "Cadastro realizado com sucesso!";
+                sessionStorage.setItem('EMAIL_USUARIO', emailVar)
+                btnCadastrar.style.display = 'none'
             } else if (error) {
                 res.status(500).json({ error: 'Erro ao cadastrar usuário' });
             }
-        }).catch(function (res) {
-            console.log(`#ERRO: ${res}`);
-        });
+        })
         return false;
     }
 
@@ -278,7 +271,6 @@
 
 
     function validacaoComentario() {
-
         if (nome_input.value == "") {
             alert('Nome deve ser informado!')
         } else if (email_input.value == "") {
@@ -315,39 +307,32 @@
 
 
     function publicar() {
-        var idUsuario = sessionStorage.ID_USUARIO;
+             validacaoComentario()
 
-        validacaoComentario()
         fetch("/avisos/publicar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                tituloServer: tituloVar,
-                descricaoServer: descricaoVar,
-                classificacaoServer: classificacaoVar
+                tituloServer: id_titulo.value,
+                descricaoServer: id_comentario.value,
+                classificacaoServer: id_avaliacaoSite.value,
+                emailVar: sessionStorage.getItem('EMAIL_USUARIO')  
             })
         })
             .then(function (res, error) {
                 if (res.ok) {
-                    res.status(200).json({ message: 'Comentário registrado com sucesso' });
-                    mensagem_erro.innerHTML = "Comentário registrado com sucesso!";
-                    setTimeout(() => {
-                        window.location = "/index.html";
-                    }, "2000")
+                   
+                    mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
                 } else if (error) {
                     res.status(500).json({ error: 'Erro ao registrar comentário' });
-                } else if (resposta.status == 404) {
+                } else if (res.status == 404) {
                     window.alert("Deu 404!");
                 } else {
                     throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
                 }
-            }).catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-
-            });
-
+            })
         return false;
     }
 </script>

@@ -11,12 +11,12 @@ router.get("/listar", function (req, res) {
     avisoController.listar(req, res);
 });
 
-router.post("/publicar/:idUsuario", function (req, res) {
+router.post("/publicar", function (req, res) {
     avisoController.publicar(req, res);
 });
 
-router.delete("/deletar/:idComentario", function (req, res) {
-    avisoController.deletar(req, res);
-});
+router.get("/comentarios/:idComentario", function (req, res) {
+    avisoController.buscarComentariosEmTempoReal(req, res);
+})
 
 module.exports = router;

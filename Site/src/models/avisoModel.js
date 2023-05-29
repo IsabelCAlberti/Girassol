@@ -18,18 +18,21 @@ function listar() {
 }
 
 
-function publicar(titulo, descricao, classificacao, idUsuario) {
-    var instrucao = `INSERT INTO aviso (titulo, descricao, classificacao, fk_usuario) VALUES ('${titulo}', '${descricao}', ${classificacao}, ${idUsuario});`;
+function publicar(titulo, descricao, classificacao, emailVar) {
+    var instrucao = `INSERT INTO aviso (titulo, descricao, classificacao, fk_usuario) VALUES ('${titulo}', '${descricao}', ${classificacao}, (select idUsuario from usuario where email = '${emailVar}'));`;
     return database.executar(instrucao);
 }
 
-function deletar(idComentario) {
-    var instrucao = ` DELETE FROM aviso WHERE id = ${idComentario}; `;
-    return database.executar(instrucao);
+
+function buscarComentariosEmTempoReal() {
+    instrucaoSql = `select texto, nota, nome from usuario join comentario on idUsuario = Fkusuario;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
 }
 
 module.exports = {
     listar,
     publicar,
-     deletar
+      buscarComentariosEmTempoReal
 }
