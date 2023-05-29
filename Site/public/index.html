@@ -196,6 +196,10 @@
         </div>
     </div>
 
+    <div id="todos_os_comentarios" class="container_geral_comentarios_publicados">
+        <!--Comentários dinâmicos-->
+        <div id="impressao_comentario" style=" height: 320px; overflow-y: scroll;"></div>
+    </div>
     <!----------------------------- FOOTER ----------------------------------->
 
     <div class="footer">
@@ -306,9 +310,8 @@
     }
 
 
-    function publicar() {
-             validacaoComentario()
-
+    async function publicar() {
+        validacaoComentario()
         fetch("/avisos/publicar", {
             method: "POST",
             headers: {
@@ -318,21 +321,73 @@
                 tituloServer: id_titulo.value,
                 descricaoServer: id_comentario.value,
                 classificacaoServer: id_avaliacaoSite.value,
-                emailVar: sessionStorage.getItem('EMAIL_USUARIO')  
+                utilServer: ipt_utilSim.value,
+                emailVar: sessionStorage.getItem('EMAIL_USUARIO')
             })
         })
             .then(function (res, error) {
-                if (res.ok) {
-                   
-                    mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
-                } else if (error) {
-                    res.status(500).json({ error: 'Erro ao registrar comentário' });
-                } else if (res.status == 404) {
-                    window.alert("Deu 404!");
-                } else {
-                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-                }
+                mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
+
+
             })
-        return false;
+
+        function mostraPraSempre() {
+            fetch("/avisos/buscarComentariosEmTempoReal")
+                .then((res) => res.json())
+                .then((comentarios) => {
+                    console.log(comentarios);
+                    plotarComentarios(comentarios)
+
+                })
+        }
+
+        mostraPraSempre();
+        setInterval(() => { mostraPraSempre() }, 2000);
+
+
+        function plotarComentarios(resposta) {
+            impressao_comentario.style.display = "block"
+            var contador = 0
+
+            impressao_comentario.innerHTML = ``;
+
+            while (contador < resposta.length) {
+                impressao_comentario.innerHTML += `
+        <div id="comentario3" class="comentario_publicado_fixo">
+        <img src="./assets/pessoa1.png" class="img_comentario_fixo">
+            <div class="container_comentario_fixo_interno">
+                <span class="texto_avaliacao_comentario_fixo"> 
+                Avaliou conteúdo como: 
+                <span>${resposta[contador].classificacao} estrelas </span>
+                <div type="text" class="nome_comentario">${resposta[contador].nome}</div>
+                <div type="text" class="container_conteudo_comentario"> ${resposta[contador].descricao}</div>
+                <div type="text" class="container_conteudo_comentario"> ${resposta[contador].util}</div>
+            </div>
+            <div style="height: 120px;"></div>
+        </div> `;
+                contador++;
+            }
+            if (contador > 2) {
+                document.getElementById('todos_os_comentarios').style.height = "500px";
+            }
+            if (contador > 3) {
+                document.getElementById('todos_os_comentarios').style.height = "650px";
+            }
+            if (contador > 4) {
+                document.getElementById('todos_os_comentarios').style.height = "700px";
+            }
+            if (contador > 5) {
+                document.getElementById('todos_os_comentarios').style.height = "850px";
+            }
+            if (contador > 6) {
+                document.getElementById('todos_os_comentarios').style.height = "900px";
+            }
+            if (contador > 8) {
+                document.getElementById('todos_os_comentarios').style.height = "950px";
+            }
+            if (contador > 10) {
+                document.getElementById('todos_os_comentarios').style.height = "1200px";
+            }
+        }
     }
 </script>

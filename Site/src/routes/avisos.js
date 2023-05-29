@@ -15,7 +15,7 @@ router.post("/publicar", function (req, res) {
     avisoController.publicar(req, res);
 });
 
-router.get("/comentarios/:idComentario", function (req, res) {
+router.get("/buscarComentariosEmTempoReal", function (req, res) {
     avisoController.buscarComentariosEmTempoReal(req, res);
 })
 

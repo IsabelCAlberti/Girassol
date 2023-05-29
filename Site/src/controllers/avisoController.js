@@ -24,6 +24,7 @@ function publicar(req, res) {
     var descricao = req.body.descricaoServer;
     var classificacao = req.body.classificacaoServer;
     var email = req.body.emailVar;
+    var util = req.body.utilServer;
 
     if (titulo == undefined) {
         res.status(400).send("O título está indefinido!");
@@ -32,27 +33,23 @@ function publicar(req, res) {
     } else if (classificacao == undefined) {
         res.status(403).send("A classificação está indefinida!");
     } else {
-        avisoModel.publicar(titulo, descricao, classificacao, email)
+        avisoModel.publicar(titulo, descricao, classificacao, util, email)
             .then(
                 function (resultado) {
                     res.json(resultado);
                 }
             )
             .catch(
-                function (erro) {
-                    res.status(500).json(erro.sqlMessage);
+                function (err) {
+                    res.status(500).json(err.sqlMessage);
                 }
             );
     }
 }
 
 function buscarComentariosEmTempoReal(req, res) {
-
-    var idComentario = req.params.idComentario;
-
-    console.log(`Recuperando comentarios em tempo real`);
-
-    medidaModel.buscarComentariosEmTempoReal(idComentario).then(function (resultado) {
+     avisoModel.buscarComentariosEmTempoReal()
+     .then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

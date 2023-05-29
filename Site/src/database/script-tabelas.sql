@@ -12,18 +12,21 @@ use girassol;
 
 DROP database girassol;
 
+
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50)
 );
 
+ALTER TABLE usuario modify email VARCHAR(50) UNIQUE;
+
 CREATE TABLE aviso (
 	idComentario INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
     classificacao INT,
-    util CHAR(1),
+    util VARCHAR(5),
 	fk_usuario INT,
     constraint usuariofk
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(idUsuario)
