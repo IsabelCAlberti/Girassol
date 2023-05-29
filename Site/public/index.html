@@ -19,12 +19,9 @@
 
 <body>
 
+    <!------------------- Texto Inicio -------------------->
+
     <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
         <div class="inicio">
             <section class="landing">
                 <div class="wel-screen">
@@ -43,7 +40,7 @@
                     O girassol é uma planta originárias da América do Norte, que normalmente germina, floresce e morre
                     no período de um ano. É da família das Asteraceae, do gênero Heliantheae contendo aproximadamente
                     cerca de 70 éspecies diferentes.
-
+                </p>
                 <p id="text-2">
                     Apresenta uma característica única de seguir o movimento do sol. Esse
                     fenômeno é conhecido como heliotropismo que seria a movimentação durante o dia acompanhando o
@@ -81,13 +78,7 @@
                     RESILIENCIA por sua capacidade de enfrentar condições adversas e ainda assim florescer, além de seus
                     caules resistentes e suas folhas duráveis.
                 </p>
-                <br>
-
             </div>
-            <!-- <div class="figuras" data-tilt data-tilt-scale="1.1">
-                <img src="../assets/rodela-girassol.png" width="380" alt="">
-                <img src="../assets/pngegg (3).png" width="360" alt="">
-            </div> -->
         </section>
 
         <!--------------------- SESSÃO 2 ------------------------>
@@ -139,13 +130,10 @@
                 </div>
             </div>
         </section>
-
-    </div>
-    </div>
     </div>
 
 
-    <!--Espaço para comentários-->
+    <!------------------- Comentários -------------------->
 
     <div class="comentarios">
         <div class="container">
@@ -161,7 +149,8 @@
                         <span class="texto_email">Email: </span>
                         <input class="email_input" id="email_input" type="text" placeholder="meuemail@provedor.com">
                     </div>
-                    <button style="margin-top: 3%; padding: 10px 40px;" class="botao" id="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
+                    <button style="margin-top: 3%; padding: 10px 40px;" class="botao" id="btn-cadastrar"
+                        onclick="cadastrar()">Cadastrar</button>
                     <div class="comentario">
                         <span class="texto_titulo">Título: </span>
                         <input name="titulo" class="input_titulo" maxlength="100" type="text" id="id_titulo"
@@ -196,11 +185,9 @@
                             </input>
                         </div>
                     </div>
-                    <button style="margin-top: 3%; padding: 10px 40px;"  onclick="publicar()" type="submit" id="botao_publicar">Publicar</button>
-
+                    <button style="margin-top: 3%; padding: 10px 40px;" onclick="publicar()" type="submit"
+                        id="botao_publicar">Publicar</button>
                 </form>
-                <br>
-
             </div>
         </div>
         <div id="mensagemAvaliacao"></div>
@@ -209,9 +196,6 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
-
 
     <!----------------------------- FOOTER ----------------------------------->
 
@@ -224,12 +208,8 @@
     </div>
 
 </body>
-
 </html>
-<script type="text/javascript" src="vanilla-tilt.js"></script>
 <script>
-
-
 
     function cadastrar() {
         var nomeVar = nome_input.value;
@@ -260,12 +240,12 @@
                 res.status(200).json({ message: 'Usuário cadastrado com sucesso' });
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
                 setTimeout(() => {
-                    const btnCadastrar= document.querySelector('#btn-cadastrar');
+                    const btnCadastrar = document.querySelector('#btn-cadastrar');
                     btnCadastrar.addEventListener('click', () => {
-                        btnCadastrar.style.display='none'
+                        btnCadastrar.style.display = 'none'
                     })
                 }, "1000")
-             } else if (error) {
+            } else if (error) {
                 res.status(500).json({ error: 'Erro ao cadastrar usuário' });
             }
         }).catch(function (res) {
@@ -274,8 +254,8 @@
         return false;
     }
 
-    function verificarAvaliacaoSite() {
 
+    function verificarAvaliacaoSite() {
         var valor = document.getElementById("id_avaliacaoSite");
         var opcao_valor = valor.options[valor.selectedIndex].value;
 
@@ -295,6 +275,7 @@
     function mgsEncerramento() {
         alert("Comentário realizado com sucesso!")
     }
+
 
     function validacaoComentario() {
 
@@ -322,7 +303,6 @@
     }
 
     function validarUtilidade() {
-
         var checkSim = document.getElementsByName("ipt_utilSim");
         var checkNao = document.getElementsByName("ipt_utilNao");
 
@@ -333,11 +313,11 @@
         }
     }
 
+
     function publicar() {
         var idUsuario = sessionStorage.ID_USUARIO;
 
         validacaoComentario()
-
         fetch("/avisos/publicar", {
             method: "POST",
             headers: {
@@ -349,30 +329,25 @@
                 classificacaoServer: classificacaoVar
             })
         })
-                .then(function (res, error) {
-                    if (res.ok) {
-                        res.status(200).json({ message: 'Comentário registrado com sucesso' });
-                        mensagem_erro.innerHTML = "Comentário registrado com sucesso!";
-                        setTimeout(() => {
-                            window.location = "/index.html";
-                        }, "2000")
-                                       } else if (error) {
-                        res.status(500).json({ error: 'Erro ao registrar comentário' });
-                    } else if (resposta.status == 404) {
-                        window.alert("Deu 404!");
-                    } else {
-                        throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-                    }
-                }).catch(function (resposta) {
-                    console.log(`#ERRO: ${resposta}`);
-                
-                });
+            .then(function (res, error) {
+                if (res.ok) {
+                    res.status(200).json({ message: 'Comentário registrado com sucesso' });
+                    mensagem_erro.innerHTML = "Comentário registrado com sucesso!";
+                    setTimeout(() => {
+                        window.location = "/index.html";
+                    }, "2000")
+                } else if (error) {
+                    res.status(500).json({ error: 'Erro ao registrar comentário' });
+                } else if (resposta.status == 404) {
+                    window.alert("Deu 404!");
+                } else {
+                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
 
-            return false;
+            });
 
-        }
-    
-
-
-
+        return false;
+    }
 </script>
