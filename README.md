@@ -17,18 +17,18 @@ Para o banco de dados utilizei o mySQL, juntamente com o node.js. No desenvolvim
 
 # Como Rodar o Site
 
-1º Clonar o repositório 
-2º Abra a pasta e entre na pasta SITE
-3º Abra o terminal de comando do seu sistema ou o git bash
-4º Digite npm i
-5º Digite npm start
-Aparecerá as seguintes informações:
+1º Clonar o repositório <br>
+2º Abra a pasta e entre na pasta SITE <br>
+3º Abra o terminal de comando do seu sistema ou o git bash <br>
+4º Digite npm i <br>
+5º Digite npm start <br>
+Aparecerá as seguintes informações: <br>
 
 > beleza-de-girassol@2.0.0 start
 > node app.js
-Servidor rodando em http://localhost:3333
+Servidor rodando em xxxxxxxxxxxxx <br>
 
-6º Clique em http://localhost:3333
+6º Clique em xxxxxxxxxxxxxx <br>
 
 O site abrirá e é só aproveitar!!! 
 
