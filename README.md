@@ -1,4 +1,4 @@
-<img style="width:40vw; height:60vh" src="https://github.com/IsabelCAlberti/Girassol/blob/main/Site/public/assets/foco-meioGirassol.jpg?raw=true">
+<img style="width:40vw; height:80vh; border-radius:3%;" src="https://github.com/IsabelCAlberti/Girassol/blob/main/Site/public/assets/foco-meioGirassol.jpg?raw=true">
 
 
 
