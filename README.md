@@ -1,4 +1,4 @@
-<img style=" filter: drop-shadow(10px -8px 21px #000000); width: 70px; height: 65px; border-radius:3%;" src="https://github.com/IsabelCAlberti/Girassol/blob/main/Site/public/assets/foco-meioGirassol.jpg?raw=true">
+<img style="width: 150px; height: 85px; border-radius:3px;" src="https://github.com/IsabelCAlberti/Girassol/blob/main/Site/public/assets/foco-meioGirassol.jpg?raw=true">
 
 
 
