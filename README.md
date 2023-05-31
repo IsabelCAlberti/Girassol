@@ -1,4 +1,6 @@
-<img src="https://github.com/IsabelCAlberti/Girassol/blob/main/assets/rodela-girassol.png?raw=true">
+body{
+backgroud-image: url("https://github.com/IsabelCAlberti/Girassol/blob/main/Site/public/assets/foco-meioGirassol.jpg?raw=true")
+}
 
 
 # Girassol
