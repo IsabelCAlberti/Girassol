@@ -134,7 +134,7 @@
 
     <!------------------- Comentários -------------------->
 
-    <div class="comentarios">
+    <div class="comentarios" id=" comentarios">
         <div class="container">
             <h1 style="  font-size: 60px;">Deixe seu Comentário</h1>
             <div class="div-form">
@@ -162,7 +162,7 @@
                         <span>Deixe sua avaliação</span>
                         <div class="selectAvaliacao">
                             <select name="avaliacaoSite" id="id_avaliacaoSite" class="input_classificacao">
-                                <option class="avaliacaoSite">-</option>
+                                <option class="avaliacaoSite"></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -198,22 +198,71 @@
 
     <div id="todos_os_comentarios" class="container_geral_comentarios_publicados">
         <!--Comentários dinâmicos-->
-        <div id="impressao_comentario" style=" height: 320px; overflow-y: scroll;"></div>
-    </div>
-    <!----------------------------- FOOTER ----------------------------------->
-
-    <div class="footer">
-        <div class="footerContainer">
-            <p style=" padding: 1%;">
-                Copyright © 2023, Todos os direitos reservados.
-            </p>
+        <div id="impressao_comentario" style="text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
+             filter: drop-shadow(8px -5px 17px #8d8b12); 
+                  font-size: 1em; 
+        height: 220px; 
+        margin-left: 35%;
+        overflow-y: auto;">
         </div>
-    </div>
+
+        <!----------------------------- GRÁFICO ------------------------------style="display:none;"----->
+        <div id="graficoDinamico" style="display: none;">
+            <canvas id="myChart" style="height:30vh; width:40vw"></canvas>
+        </div>
+
+        <!----------------------------- FOOTER ----------------------------------->
+
+        <div class="footer">
+            <div class="footerContainer">
+                <p style=" padding: 1%;">
+                    Copyright © 2023, Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
 
 </body>
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    const labels = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+    ];
+
+    const data = {
+        labels: ['1 estrela', '2 estrela', '3 estrela', '4 estrela', '5 estrela', '6 estrela', '7 estrela', '8 estrela', '9 estrela', '10 estrela'],
+        datasets: [{
+            label: 'Classificação pelo Usuário',
+            backgroundColor: 'rgb(255,99,132)',
+            borderColor: 'rgb(22,99,132)',
+            data: [2, 2, 5, 2, 20, 30, 45, 10, 50, 10],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
 
     function cadastrar() {
         var nomeVar = nome_input.value;
@@ -268,22 +317,19 @@
         }
     }
 
-
     function mgsEncerramento() {
         alert("Comentário realizado com sucesso!")
     }
 
 
     function validacaoComentario() {
-        if (nome_input.value == "") {
-            alert('Nome deve ser informado!')
-        } else if (email_input.value == "") {
-            alert('Email deve ser preenchido')
-        }
-        else if (email_input.value.indexOf("@") == -1 || email_input.value.indexOf(".") == -1) {
-            alert('Ops, e-mail inválido! Verifique e tente novamente.')
-        }
-        else if (id_titulo.value == "") {
+        var valor = document.getElementById("id_avaliacaoSite");
+        var opcao_valor = valor.options[valor.selectedIndex].value;
+
+        var checkSim = document.getElementsByName("ipt_utilSim");
+        var checkNao = document.getElementsByName("ipt_utilNao");
+
+        if (id_titulo.value == "") {
             alert('Título deve ser preenchido')
         }
         else if (id_comentario.value == "") {
@@ -291,10 +337,14 @@
         }
         else if (id_avaliacaoSite.value == "") {
             alert("Avalie-me, para que eu possa buscar a excelência")
+            verificarAvaliacaoSite()
+        }
+        else if (checkNao == " " || checkSim == "") {
+            alert("Por favor, Diga se o conteúdo da página foi útil")
+            validarUtilidade()
         }
         else {
-            verificarAvaliacaoSite()
-            setTimeout(mgsEncerramento, 2000)
+            setTimeout(mgsEncerramento, 300)
         }
     }
 
@@ -302,8 +352,10 @@
         var checkSim = document.getElementsByName("ipt_utilSim");
         var checkNao = document.getElementsByName("ipt_utilNao");
 
-        if (checkSim.checked == true || checkNao.checked == true) {
+        if (checkSim.checked == true || checkNao.checked == false) {
             mensagemAvaliacao.innerHTML += "<br>Excelente. Que bom que gostou!!";
+        } else if (checkSim.checked == false || checkNao.checked == true) {
+            mensagemAvaliacao.innerHTML += "<br>Que pena. =/!!";
         } else {
             alert("Por favor, Diga se o conteúdo da página foi útil")
         }
@@ -327,8 +379,6 @@
         })
             .then(function (res, error) {
                 mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
-
-
             })
 
         function mostraPraSempre() {
@@ -347,47 +397,47 @@
 
         function plotarComentarios(resposta) {
             impressao_comentario.style.display = "block"
+            graficoDinamico.style.display = "block"
+         
             var contador = 0
 
             impressao_comentario.innerHTML = ``;
 
             while (contador < resposta.length) {
                 impressao_comentario.innerHTML += `
-        <div id="comentario3" class="comentario_publicado_fixo">
-        <img src="./assets/pessoa1.png" class="img_comentario_fixo">
-            <div class="container_comentario_fixo_interno">
-                <span class="texto_avaliacao_comentario_fixo"> 
-                Avaliou conteúdo como: 
-                <span>${resposta[contador].classificacao} estrelas </span>
-                <div type="text" class="nome_comentario">${resposta[contador].nome}</div>
-                <div type="text" class="container_conteudo_comentario"> ${resposta[contador].descricao}</div>
-                <div type="text" class="container_conteudo_comentario"> ${resposta[contador].util}</div>
-            </div>
-            <div style="height: 120px;"></div>
-        </div> `;
+                <b>Avaliou conteúdo como: 
+              ${resposta[contador].classificacao} estrelas </b>
+              <br><br>
+            Usuário: ${resposta[contador].nome}
+            <br><br>
+           Título: ${resposta[contador].titulo}
+            <br><br>
+        Comentário: ${resposta[contador].descricao}</b>
+         <br><br>
+         <div style="height: 100px;"></div>`;;
                 contador++;
             }
-            if (contador > 2) {
-                document.getElementById('todos_os_comentarios').style.height = "500px";
-            }
-            if (contador > 3) {
-                document.getElementById('todos_os_comentarios').style.height = "650px";
-            }
-            if (contador > 4) {
-                document.getElementById('todos_os_comentarios').style.height = "700px";
-            }
-            if (contador > 5) {
-                document.getElementById('todos_os_comentarios').style.height = "850px";
-            }
-            if (contador > 6) {
-                document.getElementById('todos_os_comentarios').style.height = "900px";
-            }
-            if (contador > 8) {
-                document.getElementById('todos_os_comentarios').style.height = "950px";
-            }
-            if (contador > 10) {
-                document.getElementById('todos_os_comentarios').style.height = "1200px";
-            }
+            // if (contador > 2) {
+            //     document.getElementById('todos_os_comentarios').style.height = "400px";
+            // }
+            // if (contador > 3) {
+            //     document.getElementById('todos_os_comentarios').style.height = "500px";
+            // }
+            // if (contador > 4) {
+            //     document.getElementById('todos_os_comentarios').style.height = "600px";
+            // }
+            // if (contador > 5) {
+            //     document.getElementById('todos_os_comentarios').style.height = "700px";
+            // }
+            // if (contador > 6) {
+            //     document.getElementById('todos_os_comentarios').style.height = "800px";
+            // }
+            // if (contador > 8) {
+            //     document.getElementById('todos_os_comentarios').style.height = "900px";
+            // }
+            // if (contador > 10) {
+            //     document.getElementById('todos_os_comentarios').style.height = "1000px";
+            // }
         }
     }
 </script>
