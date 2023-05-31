@@ -24,8 +24,8 @@ Para o banco de dados utilizei o mySQL, juntamente com o node.js. No desenvolvim
 5º Digite npm start <br>
 Aparecerá as seguintes informações: <br>
 
-> beleza-de-girassol@2.0.0 start
-> node app.js
+> beleza-de-girassol@2.0.0 start  <br>
+> node app.js  <br>
 Servidor rodando em xxxxxxxxxxxxx <br>
 
 6º Clique em xxxxxxxxxxxxxx <br>
