@@ -10,11 +10,6 @@ Para conclusão do 1º semestre do curso de Análise e Desenvolvimento de Sistem
 # Visão Geral
 Girassol é um web site que permite aos usuários encontrar informações em um único lugar sobre esta planta. 
 
-## ThermoHolic - Repositório web-data-viz
-Este repositório faz parte do projeto ThermoHolic, uma aplicação voltada para o monitoramento de temperatura na produção de cervejas artesanais. O repositório web-data-viz contém o código fonte em JavaScript e HTML responsável por fornecer a visualização dos dados coletados na forma de uma dashboard interativa. O banco de dados utilizado é o MySQL, gerenciado pelo MySql Workbench.
-
-
-
 # Funcionalidades Principais
 - Visualização de Dados: A aplicação web oferece uma dashboard interativa que exibe os dados da classificação do site feito pelos usuários.
 - Atualização em Tempo Real: Os dados são atualizados automaticamente na dashboard conforme novas avaliações, mantendo os usuários sempre atualizados.
