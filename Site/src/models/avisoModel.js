@@ -17,16 +17,19 @@ function listar() {
     return database.executar(instrucao);
 }
 
-
 function publicar(titulo, descricao, classificacao, util, emailVar) {
     var instrucao = `INSERT INTO aviso (titulo, descricao, classificacao, util, fk_usuario) VALUES ('${titulo}', '${descricao}', ${classificacao}, '${util}', (select idUsuario from usuario where email = '${emailVar}'));`;
     return database.executar(instrucao);
 }
 
+function buscarUltimasClassificacoes() {
+    instrucaoSql = `SELECT classificacao AS "classificacao" , count(classificacao) AS "quantidade" FROM aviso GROUP BY classificacao ORDER BY classificacao ASC;    `
+    console.log("Executando a instrução SQL do buscar classificacao: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 function buscarComentariosEmTempoReal() {
     instrucaoSql = `select titulo, descricao, classificacao, util, nome from usuario join aviso on idUsuario = Fk_usuario;`;
-
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
@@ -34,5 +37,6 @@ function buscarComentariosEmTempoReal() {
 module.exports = {
     listar,
     publicar,
-      buscarComentariosEmTempoReal
+    buscarComentariosEmTempoReal,
+    buscarUltimasClassificacoes
 }

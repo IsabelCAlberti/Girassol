@@ -19,4 +19,8 @@ router.get("/buscarComentariosEmTempoReal", function (req, res) {
     avisoController.buscarComentariosEmTempoReal(req, res);
 })
 
+router.get("/ultimas", function (req, res) {
+    avisoController.buscarUltimasClassificacoes(req, res);
+});
+
 module.exports = router;

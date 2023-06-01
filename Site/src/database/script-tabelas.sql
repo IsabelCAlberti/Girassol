@@ -35,4 +35,5 @@ CREATE TABLE aviso (
 select * from usuario;
 select * from aviso;
 
+SELECT classificacao AS "classificacao" , count(classificacao) AS "quantidade" FROM aviso GROUP BY classificacao ORDER BY classificacao ASC;
 
