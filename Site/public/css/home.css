@@ -1,4 +1,4 @@
-html {
+html, body{
   background-color: #fdeeee !important;
 }
 
@@ -25,10 +25,11 @@ html {
 
 .h3-title {
   font-family: "Vollkorn", "Cinzel", "Comfortaa";
-  font-size: 225%;
+  font-size: 215%;
   color: #fff;
   text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
   line-height: 40px;
+overflow-y: hidden;
 }
 
 /*------------------------------  TEXTOS MEIO  ------------------------------------*/
@@ -77,7 +78,6 @@ html {
   background-size: 100%;
   background-position: 200% 85%;
   background-repeat: no-repeat;
-  opacity: 0.9;
 }
 
 .sessao-2 .container {
@@ -114,12 +114,12 @@ html {
 
 /*------------------- SESSÃO COMENTÁRIOS ---------------------------*/
 
+
 .comentarios {
-  font-family: "EB Garamond", serif, "Comfortaa";
+   font-family: "EB Garamond", serif, "Comfortaa";
   text-align: justify;
   color: #391c19ba;
   font-weight: bold;
-  filter: drop-shadow(18px -8px 10px #b269695a);
 }
 
 .infoUsuario {
@@ -128,11 +128,14 @@ html {
   align-items: center;
 }
 
-
 .texto_usuario,
 .texto_email {
   margin-left: 2%;
   margin-right: 2%;
+}
+
+.container_geral_comentarios_publicados{
+  background-color: #fdeeee !important;
 }
 
 .comentario {
@@ -149,7 +152,7 @@ html {
 }
 
 .comentarios button {
-  margin-top: 2%;
+  margin-top: 3%;
   margin-left: 38%;
   cursor: pointer;
   padding: 4px 35px;
@@ -167,11 +170,10 @@ html {
 .util,
 .comentarios,
 .div-form {
-  margin-top: 2%;
+  background-color: #fdeeee;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1%;
 }
 
 .selectAvaliacao,
