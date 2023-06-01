@@ -19,7 +19,8 @@ function listar() {
 
 function publicar(titulo, descricao, classificacao, util, emailVar) {
     var instrucao = `INSERT INTO aviso (titulo, descricao, classificacao, util, fk_usuario) VALUES ('${titulo}', '${descricao}', ${classificacao}, '${util}', (select idUsuario from usuario where email = '${emailVar}'));`;
-    return database.executar(instrucao);
+    database.executar(instrucao);
+    return database.executar(`select titulo, descricao, classificacao, util, nome from usuario join aviso on idUsuario = Fk_usuario;`)
 }
 
 function buscarUltimasClassificacoes() {

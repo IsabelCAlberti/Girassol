@@ -207,13 +207,10 @@
         </div>
 
         <!----------------------------- GRÁFICO ------------------------------style="display:none;"----->
-        <div id="graficos">
-            <div id="grafico1">
-                <div id="graficoDinamico" style="display: block;">
-                    <canvas id="myChart" style="height:30vh; width:40vw"></canvas>
-                </div>
-            </div>
-        </div>
+      
+                <div id="graficoDinamico" style="display: block; height:60vh; width:70vw;">
+                    <canvas id="myChart"></canvas>
+                    </div>
         <!----------------------------- FOOTER ----------------------------------->
 
         <div class="footer">
@@ -268,8 +265,14 @@
                 label: 'Classificação dos Usuários',
                 data: data,
                 fill: true,
-                backgroundColor: 'rgb(255,99,132)',
-                                borderColor: 'rgb(22,99,132)',
+                backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(75, 192, 192)',
+      'rgb(255, 205, 86)',
+      'rgb(201, 203, 207)',
+      'rgb(54, 162, 235)'
+    ],
+                borderColor: 'rgb(22,99,132)',
                 tension: 0.1,
                 borderWidth: 1
             },

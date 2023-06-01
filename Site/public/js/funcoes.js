@@ -58,9 +58,6 @@ function mgsEncerramento() {
 
 
 function validacaoComentario() {
-    var valor = document.getElementById("id_avaliacaoSite");
-    var opcao_valor = valor.options[valor.selectedIndex].value;
-
     var checkSim = document.getElementsByName("ipt_utilSim");
     var checkNao = document.getElementsByName("ipt_utilNao");
 
@@ -114,27 +111,16 @@ async function publicar() {
     })
         .then(function (res, error) {
             mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
-        })
-
-    // function mostraPraSempre() {
-    //     fetch("/avisos/buscarComentariosEmTempoReal")
-    //         .then((res) => res.json())
-    //         .then((comentarios) => {
-    //             console.log(comentarios);
-    //             plotarComentarios(comentarios)
-
-    //         })
-    // }
-
-    // mostraPraSempre();
-    // setInterval(() => { mostraPraSempre() }, 2000);
-
+            return res.json()
+        }).then((data)=>{
+            
+            plotarComentarios(data)
+          })
 
     function plotarComentarios(resposta) {
         impressao_comentario.style.display = "block"
-        //graficoDinamico.style.display = "block"
-
-        var contador = 0
+        console.log("Essa é a resposta: ",resposta);
+            var contador = 0
 
         impressao_comentario.innerHTML = ``;
 
@@ -152,26 +138,6 @@ async function publicar() {
      <div style="height: 100px;"></div>`;;
             contador++;
         }
-        // if (contador > 2) {
-        //     document.getElementById('todos_os_comentarios').style.height = "400px";
-        // }
-        // if (contador > 3) {
-        //     document.getElementById('todos_os_comentarios').style.height = "500px";
-        // }
-        // if (contador > 4) {
-        //     document.getElementById('todos_os_comentarios').style.height = "600px";
-        // }
-        // if (contador > 5) {
-        //     document.getElementById('todos_os_comentarios').style.height = "700px";
-        // }
-        // if (contador > 6) {
-        //     document.getElementById('todos_os_comentarios').style.height = "800px";
-        // }
-        // if (contador > 8) {
-        //     document.getElementById('todos_os_comentarios').style.height = "900px";
-        // }
-        // if (contador > 10) {
-        //     document.getElementById('todos_os_comentarios').style.height = "1000px";
-        // }
+        
     }
 }
