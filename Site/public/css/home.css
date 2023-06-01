@@ -63,8 +63,8 @@ overflow-y: hidden;
 }
 
 #graficoDinamico {
-  filter: drop-shadow(20px -8px 21px #000000);
- margin-left: 37%;
+  filter: drop-shadow(18px -8px 21px #000000);
+ margin-left: 10%;
   margin-bottom: 5%;
 }
 
@@ -166,8 +166,6 @@ overflow-y: hidden;
 
 .avaliacao,
 .selectAvaliacao,
-.utilSpan,
-.util,
 .comentarios,
 .div-form {
   background-color: #fdeeee;
@@ -176,7 +174,7 @@ overflow-y: hidden;
   align-items: center;
 }
 
-.selectAvaliacao,
-.util {
+.selectAvaliacao
+{
   margin-left: 7%;
 }

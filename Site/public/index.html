@@ -145,6 +145,7 @@
                     </div>
                     <button style="margin-top: 3%; padding: 10px 40px;" class="botao" id="btnCadastrar"
                         onclick="cadastrar()">Cadastrar</button>
+
                     <div class="comentario">
                         <span class="texto_titulo">Título: </span>
                         <input name="titulo" class="input_titulo" maxlength="100" type="text" id="id_titulo"
@@ -153,8 +154,8 @@
                         <textarea name="descricao" maxlength="250" class="input_descricao" type="text"
                             id="id_comentario" placeholder="Nos conte o que achou..." rows="5"></textarea>
                     </div>
-                    <div class="avaliacao">
-                        <span>Deixe sua avaliação</span>
+                    <div class="avaliacao" style="margin-top: 2%;">
+                        <span >Deixe sua avaliação</span>
                         <div class="selectAvaliacao">
                             <select name="avaliacaoSite" id="id_avaliacaoSite" class="input_classificacao">
                                 <option class="avaliacaoSite"></option>
@@ -171,14 +172,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="utilSpan">
-                        <span>Isso foi Útil?</span>
-                        <div class="util">
-                            <input id="ipt_utilSim" style="margin-right: 5%;" type="checkbox"> Sim </input>
-                            <input id="ipt_utilNao" style="margin-left: 15%; margin-right: 5%;" type="checkbox"> Não
-                            </input>
-                        </div>
-                    </div>
+                   
                     <button style="margin-top: 3%; padding: 10px 40px;" onclick="publicar()" type="submit"
                         id="botao_publicar">Publicar</button>
                 </div>
@@ -206,7 +200,7 @@
 
         <!----------------------------- GRÁFICO ------------------------------->
 
-        <div id="graficoDinamico" style="display: block; height:60vh; width:70vw; ">
+        <div id="graficoDinamico" style="height:100vh; width:80vw; ">
             <canvas id="myChart"></canvas>
         </div>
 
@@ -240,7 +234,6 @@
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
                     plotarGrafico(resposta);
-
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -267,16 +260,16 @@
                 data: data,
                 fill: true,
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(75, 192, 192)',
+                    'rgb(75, 35, 4)',
+                    '#fac1a4',
                     'rgb(255, 205, 86)',
-                    'rgb(201, 203, 207)',
-                    'rgb(78, 12, 235)',
-                    'rgb(255, 9, 132)',
-                    'rgb(75, 789, 192)',
-                    'rgb(255, 278, 86)',
-                    'rgb(201, 203, 869)',
-                    'rgb(54, 162, 27)'
+                    'rgb(249, 221, 221)',
+                    '#391c19ba',
+                    '#b26969',
+                    'rgb(75, 79, 192)',
+                    '#621708',
+                    '#322b17',
+                    '#eba346'
                 ],
                 borderColor: 'rgb(22,99,132)',
                 tension: 0.1,
@@ -297,7 +290,7 @@
         // Criando estrutura para plotar gráfico - config
 
         const config = {
-            type: 'pie', //tipo do gráfico
+            type: 'line', //tipo do gráfico
             data: dados, //dados
             options: {}
         };

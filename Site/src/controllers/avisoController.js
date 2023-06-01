@@ -7,17 +7,14 @@ function publicar(titulo, descricao, classificacao, util, emailVar) {
 
 function buscarComentariosEmTempoReal() {
     instrucaoSql = `select titulo, descricao, classificacao, util, nome from usuario join aviso on idUsuario = Fk_usuario;`;
-
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
 function buscarUltimasClassificacoes(req, res) {
     const limite_linhas = 10;
-    var idComentario = req.params.idComentario;
-
+    
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
-
     avisoModel.buscarUltimasClassificacoes(limite_linhas)
         .then(function (resultado) {
             if (resultado.length > 0) {
@@ -58,12 +55,15 @@ function publicar(req, res) {
     var email = req.body.emailVar;
     var util = req.body.utilServer;
 
+
     if (titulo == undefined) {
         res.status(400).send("O título está indefinido!");
     } else if (descricao == undefined) {
         res.status(400).send("A descrição está indefinido!");
     } else if (classificacao == undefined) {
         res.status(403).send("A classificação está indefinida!");
+    } else if (util == undefined) {
+        res.status(403).send("O isso foi útil? está indefinida!");
     } else {
         avisoModel.publicar(titulo, descricao, classificacao, util, email)
             .then(

@@ -2,18 +2,16 @@
 function cadastrar() {
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
+    let regexEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
-    if (nomeVar == "") {
+    if (nomeVar == "" || nomeVar.trim().length === 0) {
         alert('Nome deve ser informado!')
         return false;
-    } else if (emailVar == "") {
-        alert('Email deve ser preenchido')
+    } else if (emailVar == "" || emailVar.trim().length === 0 || !regexEmail.test(emailVar.trim())) {
+        alert('Ops, E-mail inválido')
         return false;
     }
-    else if (emailVar.indexOf("@") == -1 || email_input.value.indexOf(".") == -1) {
-        alert('Ops, e-mail inválido! Verifique e tente novamente.')
-        return false;
-    }
+   
     fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {
@@ -70,9 +68,10 @@ function validacaoComentario() {
     else if (id_avaliacaoSite.value == "") {
         alert("Avalie-me, para que eu possa buscar a excelência")
         verificarAvaliacaoSite()
-    }
-    else if (checkNao == " " || checkSim == "") {
+           }
+    else if (checkNao == "" || checkSim == "") {
         alert("Por favor, Diga se o conteúdo da página foi útil")
+        } else if(checkNao != "" || checkSim != ""){
         validarUtilidade()
     }
     else {
@@ -93,8 +92,7 @@ function validarUtilidade() {
     }
 }
 
-
-async function publicar() {
+function publicar() {
     validacaoComentario()
     fetch("/avisos/publicar", {
         method: "POST",
@@ -106,15 +104,14 @@ async function publicar() {
             descricaoServer: id_comentario.value,
             classificacaoServer: id_avaliacaoSite.value,
             utilServer: ipt_utilSim.value,
-            emailVar: sessionStorage.getItem('EMAIL_USUARIO')
+                     emailVar: sessionStorage.getItem('EMAIL_USUARIO')
         })
     })
         .then(function (res, error) {
             mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
             return res.json()
         }).then((data)=>{
-            
-            plotarComentarios(data)
+                        plotarComentarios(data)
           })
 
     function plotarComentarios(resposta) {
