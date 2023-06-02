@@ -85,7 +85,7 @@
                     <a href="usos.html" target="_blank">
                         <img src="../assets/icons/tipo.png" alt=""></a>
                     <a href="usos.html" target="_blank">
-                        <p>Tipos de girassol</p>
+                        <p>Tipos de Girassol</p>
                     </a>
                 </div>
                 <div class="card-s2">
@@ -131,7 +131,7 @@
 
     <div class="comentarios" id="comentarios">
         <div class="container">
-            <h1 style="  font-size: 60px;">Deixe seu Comentário</h1>
+            <h1 style="  font-size: 60px; padding-top: 8%;">Deixe seu Comentário</h1>
             <div class="div-form">
                 <div id="form_postagem">
                     <br>
@@ -172,7 +172,14 @@
                             </select>
                         </div>
                     </div>
-                   
+                    <div class="utilSpan">
+                        <span>Isso foi Útil?</span>
+                        <div class="util">
+                            <input id="ipt_utilSim" style="margin-right: 5%;" type="checkbox"> Sim </input>
+                            <input id="ipt_utilNao" style="margin-left: 15%; margin-right: 5%;" type="checkbox"> Não
+                            </input>
+                        </div>
+                    </div>
                     <button style="margin-top: 3%; padding: 10px 40px;" onclick="publicar()" type="submit"
                         id="botao_publicar">Publicar</button>
                 </div>
@@ -205,10 +212,9 @@
         </div>
 
         <!----------------------------- FOOTER ----------------------------------->
-
         <div class="footer">
             <div class="footerContainer">
-                <a href="./sobreMim.html"><h3   style="padding-top: 1%;">#Sobre Mim</h3></a>
+                <a href="./sobreMim.html"><h3 style="padding-top: 1%;">#Sobre Mim</h3></a>
                 <p style=" padding: 1%;">
                     Copyright © 2023, Todos os direitos reservados.
                 </p>
@@ -339,12 +345,12 @@
                     }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+                    // proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+                // proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
             }
         })
             .catch(function (error) {

@@ -25,6 +25,6 @@ app.use("/avisos", avisosRouter);
 
 // Inicia o servidor
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://belezadegirassol.com:${port}`);
+    console.log(`Servidor rodando em http://localhost:${port}`);
   });
 

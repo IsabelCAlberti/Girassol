@@ -71,28 +71,29 @@ function validacaoComentario() {
            }
     else if (checkNao == "" || checkSim == "") {
         alert("Por favor, Diga se o conteúdo da página foi útil")
-        } else if(checkNao != "" || checkSim != ""){
-        validarUtilidade()
-    }
+        } 
+    //     else if(checkNao != "" || checkSim != ""){
+    //     validarUtilidade()
+    // }
     else {
         setTimeout(mgsEncerramento, 300)
     }
 }
 
-function validarUtilidade() {
-    var checkSim = document.getElementsByName("ipt_utilSim");
-    var checkNao = document.getElementsByName("ipt_utilNao");
+// function validarUtilidade() {
+//     var checkSim = document.getElementsByName("ipt_utilSim");
+//     var checkNao = document.getElementsByName("ipt_utilNao");
 
-    if (checkSim.checked == true || checkNao.checked == false) {
-        mensagemAvaliacao.innerHTML += "<br>Excelente. Que bom que gostou!!";
-    } else if (checkSim.checked == false || checkNao.checked == true) {
-        mensagemAvaliacao.innerHTML += "<br>Que pena. =/!!";
-    } else {
-        alert("Por favor, Diga se o conteúdo da página foi útil")
-    }
-}
+//     if (checkSim.checked == "sim" || checkNao.checked == "não") {
+//         mensagemAvaliacao.innerHTML += "<br>Excelente. Que bom que gostou!!";
+//     } else if (checkSim.checked == "não" || checkNao.checked == "sim") {
+//         mensagemAvaliacao.innerHTML += "<br>Que pena. =/!!";
+//     } else {
+//         alert("Por favor, Diga se o conteúdo da página foi útil")
+//     }
+// }
 
-function publicar() {
+async function publicar() {
     validacaoComentario()
     fetch("/avisos/publicar", {
         method: "POST",
@@ -104,7 +105,8 @@ function publicar() {
             descricaoServer: id_comentario.value,
             classificacaoServer: id_avaliacaoSite.value,
             utilServer: ipt_utilSim.value,
-                     emailVar: sessionStorage.getItem('EMAIL_USUARIO')
+            naoUtilServer: ipt_utilNao.value,
+            emailVar: sessionStorage.getItem('EMAIL_USUARIO')
         })
     })
         .then(function (res, error) {
