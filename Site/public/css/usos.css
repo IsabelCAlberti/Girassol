@@ -11,7 +11,7 @@ html {
   height: 100vh;
   background: url(https://images.pexels.com/photos/4301252/pexels-photo-4301252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1260&w=960)
     no-repeat 105% 65%;
-  background-color: rgb(249, 221, 221);
+  background-color: #fdeeee;;
   background-blend-mode: multiply;
   overflow-x: hidden;
 }
@@ -25,96 +25,6 @@ html {
   text-align: center;
   padding: 2rem;
   margin-bottom: 5rem;
-}
-
-.h1-title {
-  font-size: 400%;
-  color: rgb(251, 227, 0);
-  margin-right: 10%;
-  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
-}
-
-.title-divider {
-  border-top: 10px ridge rgb(249, 221, 221);
-}
-
-.container{
-  color: white;
-  font-size: 16px;
-}
-
-.tipos {
-  font-family: "EB Garamond", serif, "Comfortaa";
-  text-align: center;
-  color: white;
-  font-size: 1.1em;
-  text-shadow: 0.1em 0.1em 0.2em #391c19ba;
-  background-color: #fac1a4;
-}
-
-.buffs_img {
-  height: 70%;
-  border-radius: 18%;
-  margin: 1%;
-  width: 150px;
-  margin-right: 5%;
-}
-
-#debilis,
-#multiflorus {
-  filter: drop-shadow(10px -8px 21px #000000);
-  margin-bottom: 4%;
-}
-
-/*------------------------------  TEXTOS MEIO  ------------------------------------*/
-
-.meio {
-  background-color: #fac1a4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text {
-  max-width: 70%;
-}
-
-#text-1,
-#text-2,
-#text-3,
-#text-4,
-#text-5 {
-  font-family: "EB Garamond", serif, "Comfortaa";
-  line-height: 1.5em;
-  text-align: justify;
-  color: #fdeeee;
-  margin-bottom: 4%;
-  font-size: 1.1em;
-  text-shadow: 0.1em 0.1em 0.2em #391c19ba;
-}
-
-.text h2, #economia {
-  color: #fdeeee;
-  margin-bottom: 2%;
-  line-height: 1.5em;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #391c19ba;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
-  opacity: 0.7;
-  padding: 1%;
-}
-
-#text-1:hover,
-#text-2:hover,
-#text-3:hover,
-#text-4:hover,
-#text-5:hover {
-  color: white;
-  font-size: 1.3rem;
 }
 
 .wel-text {
@@ -131,60 +41,194 @@ html {
   }
 }
 
-/* ----------------Sessão 7------------------------ */
-.sessao-7 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-     background-image: url(../assets/perfil/perfil-comentario-icons.png);
-   background-color: #fdeeee;
-}
-
-
-.jogo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  }
-
-  .jogo h3{
-    margin-right: 4%;
-     }
-
-h3{
-  color: #fdeeee;
-  margin-top: 1%;
-  margin-bottom: 2%;
-  font-size: 30px;
+.h1-title {
+  font-size: 400%;
+  color: rgb(251, 227, 0);
+  margin-right: 10%;
   text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
 }
 
-.sessao-7 p{
-  font-size: 27px;
-  text-align: center;
-  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
+
+/*------------------------------  TÓPICOS MEIO  ------------------------------------*/
+
+.meio {
   background-color: #fdeeee;
-  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.links {
-  text-decoration: none;
-  color:inherit;
+.text {
+  max-width: 70%;
+  margin-top: 3%;
+}
+
+#text-1,
+#text-2,
+#text-3,
+#text-4,
+#text-5 {
+  font-family: "EB Garamond", serif, "Comfortaa";
+  line-height: 1.5em;
+  text-align: justify;
+  color: #621708;
+  margin-bottom: 4%;
+  font-size: 1.2em;
+  text-indent: 1.5em;
+}
+
+#text-1:hover,
+#text-2:hover,
+#text-3:hover,
+#text-4:hover,
+#text-5:hover {
+  font-size: 1.3rem;
+ }
+
+.text h2 {
+  color: #fdeeee;
+  margin-bottom: 2%;
+  line-height: 1.5em;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #391c19ba;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
+  opacity: 0.7;
+  padding: 1%;
+}
+
+/* ------------- ECONOMIA --------------- */
+
+.informacoes {
+  background-color: #fdeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #621708;
+}
+
+.texto_inicio_info{
+  max-width: 70%;
+  font-family: "EB Garamond", serif, "Comfortaa";
+  line-height: 1.5em;
+  text-align: justify;
+  color: #621708;
+  margin-bottom: 4%;
+  font-size: 1.2em;
+  text-indent: 1.5em;
+}
+
+.economia{
+  color: #fdeeee;
+  margin-bottom: 2%;
+  line-height: 1.5em;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #391c19ba !important;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
+  opacity: 0.7;
+  padding: 1%;
+}
+
+.posicoesb .texto, .posicoes .texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 65%;
+  margin-bottom: 1%;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.posicoesb .texto:hover, .posicoes .texto:hover{
+font-size: 1.4em;
+}
+
+.posicoesb .texto{
+margin-right: 4%;
+}
+
+.posicoesb {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 70%;
+}
+
+.posicoes .texto{
+  margin-left: 4%;
+}
+
+.posicoes {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  max-width: 70%;
+}
+
+.numeros {
+  background-color: #391c19ba;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.dentro_circulo {
+  justify-content: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-bottom: 2%;
-  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  color: #fdeeee;
 }
 
-/* ----------------Sessão 5------------------------ */
+ /* ---------------- TIPOS ---------------- */
+
+ .texto_tipos_info{
+  background-color: #fdeeee;
+ }
+
+.texto_tipos_info p{
+  max-width: 70%;
+  font-family: "EB Garamond", serif, "Comfortaa";
+  line-height: 1.5em;
+  text-align: justify;
+  color: #621708;
+  font-size: 1.2em;
+  margin-left: 15%; 
+}
+
+ .tipos {
+  color: #fdeeee;
+  margin-bottom: 1% ;
+  margin-top: 3% ;
+  line-height: 1.5em ;
+  font-size: 36px !important ;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #391c19ba !important;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35) !important;
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4) !important;
+  opacity: 0.7 !important;
+  padding: 1% !important;
+  max-width: 70%;
+  margin-left: 15%; 
+ }
+
+/* ---------------- CARDS TIPOS------------------------ */
 .sessao-5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fac1a4;
+  background-color: #fdeeee;
 }
 
 .sessao-5 .content {
@@ -194,18 +238,6 @@ h3{
   justify-content: space-between;
 }
 
-.content h1 {
-  margin-top: 4%;
-  margin-bottom: 1%;
-  color: #fdeeee;
-  font-size: 36px;
-  background-color: #391c19ba;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
-  opacity: 0.7;
-  padding: 1%;
-}
-
 .principais-causas {
   display: flex;
   justify-content: space-between;
@@ -213,7 +245,18 @@ h3{
   cursor: pointer;
 }
 
-/*---------------- CARDS TIPO -------------------*/
+.container{
+  color: white;
+  font-size: 16px;
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4) 
+}
+
+.sessao-5 h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
 .card-S5 .face {
   display: flex;
   flex-direction: column;
@@ -224,8 +267,7 @@ h3{
   transition: 0.7;
   z-index: 1;
   background: linear-gradient(to right, #ebc4c0fe  50%, #fac1a4 100%);
-  margin-bottom: 5%;
-}
+ }
 
 .card-S5 .face.face1 {
   z-index: 2;
@@ -258,7 +300,7 @@ h3{
 }
 
 .card-S5 .face.face2 p {
-  font-size: 16px;
+  font-size: 1.1em;
   text-align: justify;
 }
 
@@ -279,73 +321,63 @@ h3{
   display: flex;
 }
 
-/* ---------------------- links ------------------------*/
 .sessao-5 img {
-  width: 150px;
-}
-
-.sessao-5 h2 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
+  width: 125px;
 }
 
 .circulo {
   background-color: #fdeeee;
   border-radius: 100%;
+  width: 125px;
+  height: 125px;
+  overflow-y: hidden;
 }
 
-.economia{
-  background-color: #fac1a4;
-}
 
-.meio-1,
-.meio-2,
-.meio-3{
- display: flex;
+/* ---------------- TIPOS LINKS------------------------ */
+.sessao-7 {
+  display: flex;
   align-items: center;
   justify-content: center;
+     background-image: url(../assets/perfil/perfil-comentario-icons.png);
+   background-color: #fdeeee;
 }
 
-.text-dados {
-  max-width: 50%;
-  margin-left: 24%;
-  text-align: center;
-  margin-bottom: 3%;
-}
-
-#porcentagem02_sul,
-#porcentagem01_centroOeste,
-#porcentagem03_sudeste,
-#porcentagem04_nordeste,
-#porcentagem05_norte {
-  background-color: #fdeeee;
-  padding: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 5em;
-  margin-left: 3vw;
-  margin-right: 2vw;
-  margin-bottom: 3%;
-  border-radius: 100% 90%;
-}
-
-
-.text-1:hover,
-.text-2:hover,
-.text-3:hover,
-.text-4:hover,
-.text-5:hover {
-  font-size: 1.3rem;
-}
-
-.text-1, 
-.text-2,
-.text-3, 
-.text-4,
-.text-5 {
-  max-width: 28%;
-  color: #fdeeee;
-  font-size:1.1em;
-  text-align: justify;
+.container h3{
+  color: #fac1a4;
+  margin-top: 1%;
   margin-bottom: 2%;
+  font-size: 30px;
+  text-shadow: 0.1em 0.1em 0.1em rgba(75, 35, 4, 0.874);
+ }
+
+.sessao-7 p{
+  font-size: 27px;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
+  background-color: #fac1a4dc;
+  opacity: 0.8;
+  padding: 15px 30px;
+}
+
+.jogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  }
+
+  .jogo h3{
+    margin-right: 4%;
+     }
+
+.links {
+  text-decoration: none;
+  color:inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2%;
+  font-size: 20px;
 }

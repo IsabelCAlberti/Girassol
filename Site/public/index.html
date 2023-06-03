@@ -264,21 +264,12 @@
             datasets: [{
                 label: 'Classificação dos Usuários',
                 data: data,
-                fill: true,
+                fill: false,
                 backgroundColor: [
-                    'rgb(75, 35, 4)',
-                    '#fac1a4',
-                    'rgb(255, 205, 86)',
-                    'rgb(249, 221, 221)',
-                    '#391c19ba',
-                    '#b26969',
-                    'rgb(75, 79, 192)',
-                    '#621708',
-                    '#322b17',
-                    '#eba346'
-                ],
-                borderColor: 'rgb(22,99,132)',
-                tension: 0.1,
+                '#322b17',
+                            ],
+                borderColor: '#621708',
+                tension: 0.2,
                 borderWidth: 1
             },
             ]
@@ -298,7 +289,7 @@
         const config = {
             type: 'line', //tipo do gráfico
             data: dados, //dados
-            options: {}
+            options:{}.point
         };
 
 

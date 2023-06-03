@@ -42,8 +42,9 @@ overflow-y: hidden;
 }
 
 .text {
-  margin-top: 5%;
+  margin-top: 4%;
   width: 55%;
+  margin-bottom: 4%;
 }
 
 #text-1,
@@ -54,28 +55,21 @@ overflow-y: hidden;
   font-family: "EB Garamond", serif, "Comfortaa";
   line-height: 1.5em;
   text-align: justify;
-  color: #391c19ba;
+ color: #621708;
   margin-bottom: 3%;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-indent: 1.5em;
-   filter: drop-shadow(20px -8px 21px #b26969);
-}
+ }
 
 #text-1:hover,
 #text-2:hover,
 #text-3:hover,
 #text-4:hover,
 #text-5:hover {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
-#graficoDinamico {
-  filter: drop-shadow(18px -8px 21px #000000);
- margin-left: 10%;
-  margin-bottom: 5%;
-}
-
-/*------------------- SESSÃO DOIS ---------------------------*/
+/*------------------- SESSÃO CARDS ---------------------------*/
 
 .sessao-2 {
   display: flex;
@@ -93,20 +87,15 @@ overflow-y: hidden;
 }
 
 .card-s2 {
-  background: linear-gradient(to right, #ebc4c0fe  50%, #fac1a4 100%);
+  background: linear-gradient(to left, #ebc4c0fe  40%, #fdeeee 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 8px;
   transition: 0.6s;
   padding: 25px;
   margin-bottom: 2%;
   text-decoration: none;
-}
-
-#form_postagem{
-  width: 100%;
 }
 
 .card-s2:hover {
@@ -116,7 +105,6 @@ overflow-y: hidden;
 .card-s2 p {
   margin-left:1%;
   text-align: center;
-  
 }
 
 .card-s2 img {
@@ -126,11 +114,14 @@ overflow-y: hidden;
 
 /*------------------- SESSÃO COMENTÁRIOS ---------------------------*/
 
+#form_postagem{
+  width: 100%;
+}
 
 .comentarios {
    font-family: "EB Garamond", serif, "Comfortaa";
   text-align: justify;
-  color: #391c19ba;
+  color: #621708;
   font-weight: bold;
 }
 
@@ -146,6 +137,12 @@ overflow-y: hidden;
   margin-right: 2%;
 }
 
+.texto_titulo,
+.texto_descricao {
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
 .container_geral_comentarios_publicados{
   background-color: #fdeeee !important;
 }
@@ -157,12 +154,6 @@ overflow-y: hidden;
   align-items: center;
 }
 
-.texto_titulo,
-.texto_descricao {
-  margin-top: 4%;
-  margin-bottom: 3%;
-}
-
 .comentarios button {
   margin-top: 3%;
   margin-left: 38%;
@@ -170,6 +161,7 @@ overflow-y: hidden;
   padding: 4px 35px;
   background-color: #391c19ba;
   color: white;
+  font-weight: bold;
 }
 
 .div-form input {
@@ -199,4 +191,12 @@ overflow-y: hidden;
 
 .selectAvaliacao {
   margin-left: 7%;
+}
+
+/*--------------------- GRAFICO ---------------------*/
+
+#graficoDinamico {
+  filter: drop-shadow(18px -8px 21px #000000);
+ margin-left: 10%;
+  margin-bottom: 5%;
 }

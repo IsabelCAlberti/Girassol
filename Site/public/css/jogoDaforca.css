@@ -6,9 +6,8 @@
 }
 
 body {
-    background-color: #1e1f26;
-    color:#fff;
-    margin: 0px;
+     background-color: #fdeeee;
+        margin: 0px;
 }
 
 img{
@@ -25,7 +24,7 @@ img{
     }
 
 #palavra-secreta{
-         color: #f48c06;
+     color: #621708;
          display: flex;
          flex-direction: row;
          justify-content: center;
@@ -40,7 +39,7 @@ img{
          box-shadow: 0px 2px 8px #391c19ba; 
          -moz-box-shadow: 0px 2px 8px #391c19ba;
          -webkit-box-shadow: 0px 2px 8px #391c19ba;
-         color: #f48c06;
+         color: #621708;
          width: 350px;
          height: 200px;
          font-size: 1.0em;
@@ -54,7 +53,7 @@ img{
          box-shadow: 0px 2px 8px #391c19ba; 
          -moz-box-shadow: 0px 2px 8px #391c19ba;
          -webkit-box-shadow: 0px 2px 8px #391c19ba;
-         color:#f48c06;
+         color: #621708;
          cursor:pointer;  
                 font-size: 0.8em;
     }
@@ -63,16 +62,9 @@ img{
          color:#391c19ba;   
          }
 
-/* .letras{
-         border-bottom: 3px solid #391c19ba; 
-         width: 10px;
-         margin-left: 2px;
-         margin-right: 2px;
-    } */
-
 #box-tentativas {
          text-align:start;
-         color: #f48c06;
+         color: #621708;
          width: 350px;
          height: 20px;
          margin-top: 20px;
@@ -81,7 +73,7 @@ img{
 
 #boxResposta {
          text-align:center;
-         color: #fff;
+         color: rgb(255, 255, 255);
          background-color: #391c19ba;
          width: 350px;
          height: 20px;
@@ -92,7 +84,7 @@ img{
 
     input {
      padding: 10px;
-     background-color: antiquewhite;
+     background-color: rgb(255, 255, 255);
    }
 
    button {
@@ -213,6 +205,7 @@ img{
          width: 30px;
          margin-left: 10px;
          margin-right: 10px;
+         color: #7c3131;
     }
 
     #box-tentativas {
@@ -231,57 +224,6 @@ img{
          font-size: 1.5em;
          border-radius:5px;
     }
-
-
-
-
-    /*
-    #palavra-secreta{
-         font-size: 1.0em;
-    }
-    
-    #box-secreta {
-         width: 550px;
-         height: 200px;
-         font-size: 2.0em;
-         margin-top: 10px;
-         padding: 10px;
-    }
-    
-    .letras{
-         width: 20px;
-         margin-left: 2px;
-         margin-right: 2px;
-    }
-    
-    #box-tentativas {
-         width: 550px;
-         height: 30px;
-         margin-top: 20px;
-         padding: 5px 0px;
-         font-size: 1.0em;
-    }
-    
-    #boxRespostafinal {
-         width: 550px;
-         height: 30px;
-         margin-top: 20px;
-         padding: 5px 0px;
-         font-size: 1.2em;
-    }
-    
-    .box-letra {
-         width: 26px;
-         height: 26px;
-         margin: 7px;
-         padding: 5px;
-         font-size: 0.8em;
-         cursor:pointer;
-         }
-    .box-container {
-         width: 95vw;
-    }   
-    */
 }
 
 /*Dispositivos large (desktops com menos de 1200px)*/

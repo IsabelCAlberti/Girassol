@@ -1,47 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Halant:wght@700&family=Nunito+Sans:wght@300&display=swap');
-
 *{
   margin: 0;
   padding: 0;
  }
 
-body{
-  height: 80vh;
-  width: 100vw;
-  background-color: #050505;
-  background-image: linear-gradient(to left, rgba(55,55,55,0.5), #fac1a4dc),url(https://cdn.pixabay.com/photo/2021/08/20/22/05/flowers-6561379_960_720.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 
-h1{
-margin-top: 5%;
-margin-bottom:18%;
-margin-left: 5%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-left: 16px;
-    font-family: 'Halant', serif;
-  line-height: 1.5;
-  font-size: 24px;
-  color: white;
-  max-width: 40vw;
-  letter-spacing: 0.08rem;
-}
-
-h1 span{
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  display: block;
-}
+/*------------- TEXTO INICIAL  e NAVBAR ------------*/
 
 ul{
-  height: 75vh;
-  width: 20vw;
-  position: absolute;
+  height: 80vh;
+  width: 10vw;
+  position: fixed;
   right: 0px;
   top: 0px;
 background: rgba(255, 255, 255, 0.04);
@@ -61,8 +29,8 @@ text-transform: uppercase;
   width: 115px;
   height: auto;
   display: block;
-  color: white;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "EB Garamond", serif, "Comfortaa";
+  color: #621708;
   cursor: pointer;
 }
 
@@ -70,83 +38,64 @@ ul li:hover{
 text-decoration: underline
 }
 
-
 /*--------------- SOBRE MIM -----------------*/
 
-h2{
-   margin-left: 5%;
-  font-family: 'Halant', serif;
-line-height: 1.5;
-font-size: 24px;
-color: white;
-max-width: 40vw;
-letter-spacing: 0.07rem;
-}
-
-#sobreMim{
-    background-color:  rgb(249, 221, 221);
-   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: justify;
-}
-
-.sobreMim{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 70%;
-    margin: auto;
-}
-
-.textoSobreMim1{
-  background-color:  rgb(249, 221, 221);
-  margin-top: 1%;
-}
-
-.isaDev{
-padding-top: 3%;
+.textoSobreMim{
+  background-color: #fdeeee;
 display: flex;
 justify-content: center;
 align-items: center;
-color: #391c19;
-filter: drop-shadow(20px -8px 21px #b26969);
-font-size: 1.1em;
-line-height: 1.5em;
-letter-spacing: 0.03rem;
+flex-direction: column;
+}
+
+.textoSobreMim p{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-family: "EB Garamond", serif, "Comfortaa";
+  color: #621708;
 }
 
 .textoSobreMim{
-    color: #391c19;
-    filter: drop-shadow(20px -8px 21px #b26969);
-    font-size: 1.1em;
-  text-indent: 1.5em;
-  line-height: 1.5em;
-  letter-spacing: 0.03rem;
+  margin-left: 8%;
 }
 
-.fundoFoto{
-    background-color: #6b4d4bb9;
-    padding: 40px;
-    border-radius: 5% 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-right: 3%;
+.teste{
+  background-color: #fdeeee;
+  display: flex;
+ }
+
+
+.valores{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdeeee;
+  font-size: 1.3em;
+  font-family: "EB Garamond", serif, "Comfortaa";
+  color: #621708;
+  margin-top: 2%;
+  text-transform: uppercase;
 }
 
-#minhaFoto, #minhaFoto2{
-      margin-top: 5%;
-    margin-bottom: 4%;
-    margin-right: 3%;
-     border-radius: 50% 90%;
-     width: 18vw;
+span{
+  text-shadow: 0.1em 0.1em 0.2em rgb(255, 242, 0) !important;
 }
 
-.fundoFoto2{
-    background: #6b4d4bb9;
-         padding: 40px;
-         border-radius: 5% 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 3%;
+/*----------------------------- FOOTER -----------------------------------*/
+
+
+.footerContainer h3{
+ 
+  font-size: 35px;
+}
+
+.footer{
+  font-size: 20px;
+  background-color: #621708;
+  text-align: center;
+  color: white;
+  text-shadow: 0.1em 0.1em 0.2em rgb(75, 35, 4);
 }

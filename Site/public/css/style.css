@@ -44,3 +44,9 @@
   background-color: #322b17;
   border-radius: 20px;
 } /* cor da barra de rolagem*/
+
+
+@media screen and (min-width:
+1024px) {
+ #main { min-width: 1000px; }
+}
