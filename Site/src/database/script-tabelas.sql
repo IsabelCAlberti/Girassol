@@ -37,3 +37,5 @@ select * from aviso;
 
 SELECT classificacao AS "classificacao" , count(classificacao) AS "quantidade" FROM aviso GROUP BY classificacao ORDER BY classificacao ASC;
 
+DELETE FROM `girassol`.`aviso` WHERE (`idComentario` = '16');
+DELETE FROM `girassol`.`aviso` WHERE (`idComentario` = '17');

@@ -11,7 +11,7 @@ function cadastrar() {
         alert('Ops, E-mail inválido')
         return false;
     }
-   
+
     fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {
@@ -50,9 +50,9 @@ function verificarAvaliacaoSite() {
     }
 }
 
-function mgsEncerramento() {
-    alert("Comentário realizado com sucesso!")
-}
+// function mgsEncerramento() {
+//     alert("Comentário realizado com sucesso!")
+// }
 
 
 function validacaoComentario() {
@@ -68,16 +68,16 @@ function validacaoComentario() {
     else if (id_avaliacaoSite.value == "") {
         alert("Avalie-me, para que eu possa buscar a excelência")
         verificarAvaliacaoSite()
-           }
+    }
     else if (checkNao == "" || checkSim == "") {
         alert("Por favor, Diga se o conteúdo da página foi útil")
-        } 
+    }
     //     else if(checkNao != "" || checkSim != ""){
     //     validarUtilidade()
     // }
-    else {
-        setTimeout(mgsEncerramento, 300)
-    }
+    // else {
+    //     setTimeout(mgsEncerramento, 300)
+    // }
 }
 
 // function validarUtilidade() {
@@ -93,7 +93,7 @@ function validacaoComentario() {
 //     }
 // }
 
-async function publicar() {
+function publicar() {
     validacaoComentario()
     fetch("/avisos/publicar", {
         method: "POST",
@@ -111,32 +111,49 @@ async function publicar() {
     })
         .then(function (res, error) {
             mensagemAvaliacao.innerHTML = "Comentário registrado com sucesso!";
-            return res.json()
-        }).then((data)=>{
-                        plotarComentarios(data)
-          })
+            res.json()
+                .then(json => {
+                    plotarComentarios(json)
+                }).catch(e => {
+                    console.error(e);
+                })
+        })
+
 
     function plotarComentarios(resposta) {
-        impressao_comentario.style.display = "block"
-        console.log("Essa é a resposta: ",resposta);
-            var contador = 0
 
-        impressao_comentario.innerHTML = ``;
 
-        while (contador < resposta.length) {
-            impressao_comentario.innerHTML += `
-            <b>Avaliou conteúdo como: 
-          ${resposta[contador].classificacao} estrelas </b>
-          <br><br>
-        Usuário: ${resposta[contador].nome}
-        <br><br>
-       Título: ${resposta[contador].titulo}
-        <br><br>
-    Comentário: ${resposta[contador].descricao}</b>
-     <br><br>
-     <div style="height: 100px;"></div>`;;
-            contador++;
-        }
-        
+        fetch("/avisos/buscarComentariosEmTempoReal")
+            .then(resposta => {
+
+                resposta.json()
+                    .then(json => {
+                        impressao_comentario.style.display = "block"
+                        var contador = 0
+
+                        impressao_comentario.innerHTML = ``;
+
+                        while (contador < json.length) {
+                            impressao_comentario.innerHTML += `
+                        <b>Avaliou conteúdo como: 
+                        ${json[contador].classificacao} estrelas </b>
+                        <br><br>
+                        Usuário: ${json[contador].nome}
+                        <br><br>
+                        Título: ${json[contador].titulo}
+                        <br><br>
+                        Comentário: ${json[contador].descricao}</b>
+                        <br><br>
+                        <div style="height: 100px;"></div>`;;
+                            contador++;
+                        }
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    })
+            })
+            .catch(err => {
+                console.error(err);
+            })
     }
 }

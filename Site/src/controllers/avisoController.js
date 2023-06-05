@@ -6,7 +6,7 @@ function publicar(titulo, descricao, classificacao, util, emailVar) {
 }
 
 function buscarComentariosEmTempoReal() {
-    instrucaoSql = `select titulo, descricao, classificacao, util, nome from usuario join aviso on idUsuario = Fk_usuario;`;
+    instrucaoSql = `select titulo, descricao, classificacao, util, nome from usuario join aviso on usuario.idUsuario = aviso.fkUsuario;`;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
